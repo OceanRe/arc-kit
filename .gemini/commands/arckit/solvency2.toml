@@ -1,0 +1,4 @@
+[command]
+description = "Perform a Solvency II Pillar 2 governance assessment"
+template = ".arckit/templates/solvency2-governance-template.md"
+output_file = "solvency2-governance.md"

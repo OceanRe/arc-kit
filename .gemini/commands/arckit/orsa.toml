@@ -1,0 +1,4 @@
+[command]
+description = "Create an Own Risk and Solvency Assessment (ORSA) report"
+template = ".arckit/templates/orsa-template.md"
+output_file = "orsa-report.md"

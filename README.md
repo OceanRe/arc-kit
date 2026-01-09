@@ -7,8 +7,8 @@
 ArcKit is a toolkit for enterprise architects that transforms architecture governance from scattered documents into a systematic, AI-assisted workflow for:
 - 🏛️ Establishing and enforcing architecture principles
 - 👥 Analyzing stakeholder drivers, goals, and outcomes
-- 🛡️ Risk management (HM Treasury Orange Book)
-- 💼 Business case justification (HM Treasury Green Book SOBC)
+- 🛡️ Risk management (Solvency II / ISO 31000)
+- 💼 Business case justification (Strategic Outline Business Case)
 - 📋 Creating comprehensive requirements documents
 - 🗄️ Data modeling with ERD, GDPR compliance, and data governance
 - 🔬 Technology research with build vs buy analysis (web search powered)
@@ -67,19 +67,6 @@ claude  # or your chosen AI assistant
 
 ---
 
-### Explore Example Outputs
-
-Public demonstration repositories showcase complete ArcKit deliverables:
-- **NHS Appointment Booking** — [arckit-test-project-v7-nhs-appointment](https://github.com/tractorjuice/arckit-test-project-v7-nhs-appointment): Digital health platform with NHS Spine integration and GDPR safeguards.
-- **M365 GCC-H Migration** — [arckit-test-project-v1-m365](https://github.com/tractorjuice/arckit-test-project-v1-m365): Government cloud migration with compliance mapping and change management.
-- **HMRC Tax Assistant** — [arckit-test-project-v2-hmrc-chatbot](https://github.com/tractorjuice/arckit-test-project-v2-hmrc-chatbot): Conversational AI service covering PII protection and bilingual support.
-- **Windows 11 Deployment** — [arckit-test-project-v3-windows11](https://github.com/tractorjuice/arckit-test-project-v3-windows11): Enterprise OS rollout with policy migration and security baselines.
-- **Patent Application System** — [arckit-test-project-v6-patent-system](https://github.com/tractorjuice/arckit-test-project-v6-patent-system): Intellectual property workflow automation using GOV.UK Pay and Notify.
-- **ONS Data Platform** — [arckit-test-project-v8-ons-data-platform](https://github.com/tractorjuice/arckit-test-project-v8-ons-data-platform): Official statistics analytics environment with Five Safes governance.
-- **Cabinet Office GenAI Platform** — [arckit-test-project-v8-cabinet-office-genai](https://github.com/tractorjuice/arckit-test-project-v8-cabinet-office-genai): Cross-government GenAI platform with responsible AI guardrails.
-
----
-
 ## Why ArcKit?
 
 ### Problem: Architecture Governance is Broken
@@ -102,16 +89,15 @@ ArcKit provides:
 
 ---
 
-## UK Government Compliance
+## Enterprise & Insurance Compliance
 
-ArcKit includes dedicated commands for UK public sector delivery:
-- `/arckit.tcop` — Assess all 13 Technology Code of Practice points across delivery phases.
-- `/arckit.ai-playbook` — Produce responsible AI assessments aligned to the UK Government AI Playbook and ATRS.
-- `/arckit.secure` — Generate Secure by Design artefacts covering NCSC CAF, Cyber Essentials, and UK GDPR controls.
-- `/arckit.mod-secure` — Map MOD Secure by Design requirements (JSP 440, IAMM, clearance pathways).
-- `/arckit.jsp-936` — Deliver JSP 936 AI assurance packs for defence AI systems.
-
-See the demo repositories for end-to-end examples, especially `arckit-test-project-v7-nhs-appointment` (civilian services) and `arckit-test-project-v8-cabinet-office-genai` (AI governance).
+ArcKit includes dedicated commands for enterprise and insurance regulatory compliance:
+- `/arckit.soc2` — Assess SOC 2 Trust Service Criteria (Security, Availability, Confidentiality, Processing Integrity, Privacy).
+- `/arckit.iso27001` — Assess ISO 27001:2022 controls across Organizational, People, Physical, and Technological domains.
+- `/arckit.solvency2` — Perform Solvency II Pillar 2 governance assessments.
+- `/arckit.orsa` — Generate Own Risk and Solvency Assessment (ORSA) reports.
+- `/arckit.secure` — Generate Secure by Design artefacts covering ISO 27001 and SOC 2 controls.
+- `/arckit.dpia` — General Data Protection Regulation (GDPR) impact assessments.
 
 ---
 
@@ -123,7 +109,7 @@ ArcKit guides you through the enterprise architecture lifecycle:
 **`/arckit.plan`** → Create project plan with timeline, phases, and gates
 
 Visualize your entire project delivery:
-- GDS Agile Delivery phases (Discovery → Alpha → Beta → Live)
+- Standard delivery phases (Discovery → Alpha → Beta → Live)
 - Mermaid Gantt chart with timeline, dependencies, and milestones
 - Workflow diagram showing gates and decision points
 - Tailored timeline based on project complexity
@@ -152,11 +138,10 @@ Define your organisation's architecture standards:
 - Define engagement and communication strategies
 
 ### Phase 3: Risk Assessment
-**`/arckit.risk`** → Create comprehensive risk register (Orange Book)
+**`/arckit.risk`** → Create comprehensive risk register
 
 **Do this BEFORE business case** to identify and assess risks systematically:
-- Follow HM Treasury Orange Book 2023 framework
-- Identify risks across 6 categories (Strategic, Operational, Financial, Compliance, Reputational, Technology)
+- Aligned with Solvency II risk categories (Underwriting, Market, Credit, Operational, Liquidity)
 - Assess inherent risk (before controls) and residual risk (after controls)
 - Apply 4Ts response framework (Tolerate, Treat, Transfer, Terminate)
 - Link every risk to stakeholder from RACI matrix
@@ -167,11 +152,11 @@ Define your organisation's architecture standards:
 **`/arckit.sobc`** → Create Strategic Outline Business Case (SOBC)
 
 **Do this BEFORE requirements** to justify investment and secure approval:
-- Use HM Treasury Green Book 5-case model (Strategic, Economic, Commercial, Financial, Management)
+- Standard 5-case model (Strategic, Economic, Commercial, Financial, Management)
 - Analyze strategic options (Do Nothing, Minimal, Balanced, Comprehensive)
 - Map benefits to stakeholder goals (complete traceability)
 - Provide high-level cost estimates (Rough Order of Magnitude)
-- Economic appraisal (ROI range, payback period)
+- Economic appraisal (ROI range, payback period, NPV)
 - Procurement and funding strategy
 - Governance and risk management (uses risk register)
 - Enable go/no-go decision BEFORE detailed requirements work
@@ -187,29 +172,13 @@ Create detailed requirements **informed by stakeholder goals** (if SOBC approved
 - Data requirements (DR-xxx)
 - Success criteria and KPIs
 
-### Phase 5.3: Platform Strategy Design (Optional - for Multi-Sided Platforms)
-**`/arckit.platform-design`** → Design multi-sided platform strategy using Platform Design Toolkit
-
-Use this phase when designing **ecosystem-based platforms** (Government as a Platform, marketplaces, data platforms):
-- **Ecosystem Canvas**: Map supply side, demand side, supporting entities with relationship diagrams
-- **Entity-Role Portraits**: Deep dive into 3-5 key entities (context, pressures, goals, gains)
-- **Motivations Matrix**: Identify synergies and conflicts across entities with mitigation strategies
-- **Transactions Board**: Design 10-20 transactions with cost reduction analysis (search, information, negotiation, coordination, enforcement)
-- **Learning Engine Canvas**: 5+ services that help participants improve (data, feedback loops, network effects)
-- **Platform Experience Canvas**: Journey maps with business model and unit economics
-- **MVP Canvas**: Liquidity bootstrapping strategy to solve chicken-and-egg problem
-- **Platform Design Canvas**: Synthesize all 8 canvases into cohesive platform strategy
-- **UK Government Context**: Aligns with Government as a Platform (GaaP), TCoP Point 8 (share/reuse), Digital Marketplace
-
-**Use Cases**: NHS appointment booking, local authority data marketplaces, training procurement platforms, citizen services portals
-
 ### Phase 5.5: Data Modeling
 **`/arckit.data-model`** → Create comprehensive data model with ERD
 
 Create data model based on Data Requirements (DR-xxx):
 - Visual Entity-Relationship Diagram (ERD) using Mermaid
 - Detailed entity catalog with attributes, types, validation rules
-- PII identification and GDPR/DPA 2018 compliance
+- PII identification and GDPR compliance
 - Data governance matrix (business owners, stewards, custodians)
 - CRUD matrix showing component access patterns
 - Data integration mapping (upstream sources, downstream consumers)
@@ -217,16 +186,16 @@ Create data model based on Data Requirements (DR-xxx):
 - Requirements traceability (DR-xxx → Entity → Attribute)
 
 ### Phase 5.7: Data Protection Impact Assessment
-**`/arckit.dpia`** → Generate DPIA for UK GDPR Article 35 compliance
+**`/arckit.dpia`** → Generate DPIA for GDPR compliance
 
 **MANDATORY for high-risk processing** - assess privacy risks before technology selection:
-- ICO 9-criteria automated screening (sensitive data, large scale, vulnerable subjects, AI/ML, etc.)
+- Standard screening criteria (sensitive data, large scale, vulnerable subjects, AI/ML, etc.)
 - Auto-populated from data model (entities, PII, special category data, lawful basis)
 - Risk assessment focused on impact on individuals (privacy harm, discrimination)
 - Data subject rights implementation checklist (SAR, deletion, portability)
 - Children's data assessment (age verification, parental consent)
 - AI/ML algorithmic processing assessment (bias, explainability, human oversight)
-- ICO prior consultation flagging for high residual risks
+- Regulator prior consultation flagging for high residual risks
 - International transfer safeguards (SCCs, BCRs, adequacy decisions)
 - Bidirectional links to risk register (DPIA-xxx risk IDs)
 - Links mitigations to Secure by Design security controls
@@ -238,8 +207,6 @@ Research available solutions to meet requirements with build vs buy analysis:
 - Dynamic category detection from requirements (authentication, payments, databases, etc.)
 - Commercial SaaS options with pricing, reviews, and ratings (WebSearch)
 - Open source alternatives with GitHub stats and community maturity
-- UK Government GOV.UK platforms (One Login, Pay, Notify, Forms)
-- Digital Marketplace suppliers (G-Cloud, DOS)
 - Total Cost of Ownership (TCO) comparison (3-year)
 - Build vs Buy vs Adopt recommendations
 - Vendor shortlisting for deeper evaluation
@@ -253,46 +220,36 @@ Visualize strategic positioning with:
 - Component evolution analysis (Genesis → Custom → Product → Commodity)
 - Build vs Buy decision framework
 - Vendor comparison and procurement strategy
-- UK Government Digital Marketplace mapping
 - Evolution predictions and strategic gameplay
 
 ### Phase 7.5: Strategic Roadmap
 **`/arckit.roadmap`** → Create multi-year architecture roadmap
 
 Create strategic roadmap for multi-year transformation programs:
-- **Multi-year timeline**: 3-5 year roadmap with Mermaid Gantt chart aligned to financial years (FY 2024/25, etc.)
+- **Multi-year timeline**: 3-5 year roadmap with Mermaid Gantt chart
 - **Strategic themes**: Cloud migration, data modernization, security & compliance, DevOps transformation
 - **Capability evolution**: Maturity progression from L1 (Initial) to L5 (Optimized) over time
 - **Investment planning**: CAPEX/OPEX budget by financial year, ROI projections, benefits realization
 - **Governance framework**: ARB monthly, Programme Board monthly, Steering Committee quarterly
-- **Service Standard gates**: Alpha/Beta/Live assessment milestones (UK Government)
 - **Dependencies**: Mermaid flowchart showing initiative sequencing and critical path
 - **Success metrics**: Cloud adoption %, technical debt reduction, deployment frequency, time to market
 - **Traceability**: Links roadmap themes to stakeholder drivers, architecture principles, requirements
-- **UK Government specifics**: Spending Review alignment, TCoP compliance timeline, NCSC CAF progression
-
-**Use this when**: You have a multi-year transformation program with multiple initiatives running in parallel. Roadmaps are strategic (multi-year, multi-initiative, executive communication) vs project plans which are tactical (single initiative, detailed tasks, team execution).
 
 **Roadmap feeds into**: `/arckit.plan` for detailed phase execution, `/arckit.sobc` for investment business case, `/arckit.backlog` for prioritized user stories.
 
 ### Phase 7.7: Architecture Decision Records
 **`/arckit.adr`** → Document architectural decisions
 
-Create Architecture Decision Records (ADRs) following MADR v4.0 format enhanced with UK Government requirements:
-- **Decision metadata**: Sequential numbering (ADR-001, ADR-002), status (Proposed/Accepted/Superseded), escalation level (Team/Cross-team/Department/Cross-government)
+Create Architecture Decision Records (ADRs) following MADR v4.0 format:
+- **Decision metadata**: Sequential numbering (ADR-001, ADR-002), status (Proposed/Accepted/Superseded)
 - **Stakeholder RACI**: Deciders (accountable), Consulted (SMEs, two-way), Informed (one-way communication)
 - **Context and problem statement**: Why this decision is needed, business/technical/regulatory drivers
-- **Decision drivers**: Technical forces (performance, security, scalability), business forces (cost, time), compliance forces (GDS Service Standard, TCoP, NCSC, UK GDPR)
-- **Options analysis**: Minimum 2-3 options plus "Do Nothing" baseline, each with pros/cons, cost (CAPEX/OPEX/TCO), GDS Service Standard impact, Wardley evolution stage
+- **Decision drivers**: Technical forces (performance, security, scalability), business forces (cost, time), compliance forces (SOC2, ISO 27001, GDPR)
+- **Options analysis**: Minimum 2-3 options plus "Do Nothing" baseline, each with pros/cons, cost (CAPEX/OPEX/TCO), Wardley evolution stage
 - **Y-Statement**: Structured justification - "In the context of X, facing Y, we decided for Z to achieve A, accepting B"
 - **Consequences**: Positive (benefits, capabilities), Negative (trade-offs, technical debt), Neutral (training, infrastructure), Risks and mitigations
 - **Validation**: How implementation will be verified (design reviews, code reviews, testing, monitoring)
 - **Traceability**: Links to requirements, principles, stakeholders, research, Wardley maps, diagrams, risk register
-- **UK Government specifics**: Escalation levels (Team → Cross-team → Department → Cross-government), governance forums (ARB, TDA, Programme Board), Service Standard/TCoP compliance documentation
-
-**Use this when**: Making significant architectural decisions that affect system structure, quality attributes, or behavior - technology choices (databases, frameworks, cloud services), integration patterns, security approaches, deployment strategies, data management.
-
-**ADR feeds into**: `/arckit.diagram` (architecture diagrams reflect decisions), `/arckit.hld-review` and `/arckit.dld-review` (reviews verify decisions implemented), `/arckit.traceability` (decisions are key traceability artifacts).
 
 ### Phase 8: Vendor Procurement (if needed)
 **`/arckit.sow`** → Generate Statement of Work (RFP)
@@ -303,37 +260,6 @@ Create RFP-ready documents with:
 - Vendor qualifications
 - Evaluation criteria
 - Contract terms
-
-**`/arckit.dos`** → Digital Outcomes and Specialists (DOS) procurement 🇬🇧
-
-For UK public sector organizations needing custom development:
-- Generate DOS-compliant procurement documentation
-- Extract requirements from project artifacts (BR/FR/NFR/INT/DR)
-- Essential vs desirable skills from requirements
-- Success criteria (technology-agnostic)
-- Evaluation framework (40% Technical, 30% Team, 20% Quality, 10% Value)
-- Audit-ready documentation for Digital Marketplace
-
-**`/arckit.gcloud-search`** → G-Cloud service search with live marketplace search 🇬🇧
-
-For UK public sector organizations needing off-the-shelf cloud services:
-- Generate G-Cloud requirements document
-- **Live Digital Marketplace search** using WebSearch
-- Find actual services with suppliers, prices, features, links
-- Service comparison table with recommendations
-- Shortlist top 3-5 matching services
-- Links to Digital Marketplace guidance (gov.uk)
-
-**`/arckit.gcloud-clarify`** → G-Cloud service validation and gap analysis 🇬🇧
-
-Validate G-Cloud services and generate supplier clarification questions:
-- **Systematic gap analysis** (MUST/SHOULD requirements vs service descriptions)
-- Detect gaps: ✅ Confirmed, ⚠️ Ambiguous, ❌ Not mentioned
-- Generate prioritised questions (🔴 Critical / 🟠 High / 🔵 Medium / 🟢 Low)
-- Risk assessment matrix for each service
-- Email templates for supplier engagement
-- Evidence requirements specification
-- Next steps checklist
 
 **`/arckit.evaluate`** → Create vendor evaluation framework
 
@@ -374,14 +300,11 @@ Implementation-ready validation:
 **`/arckit.backlog`** → Generate prioritised product backlog
 
 Transform requirements into sprint-ready user stories:
-- Convert requirements (BR/FR/NFR/INT/DR) to GDS-format user stories
+- Convert requirements (BR/FR/NFR/INT/DR) to standard user stories
 - Multi-factor prioritization (MoSCoW + risk + value + dependencies)
 - Organise into sprint plan with capacity balancing
 - Generate traceability matrix (requirements → stories → sprints)
 - Export to Jira/Azure DevOps (CSV) or custom tools (JSON)
-- **Time savings**: 75%+ (4-6 weeks → 3-5 days)
-
-**When to run**: After HLD approval, before Sprint 1 (Alpha → Beta transition)
 
 ### Phase 11: ServiceNow Service Management Design
 **`/arckit.servicenow`** → Generate ServiceNow service design
@@ -417,89 +340,47 @@ Periodically assess governance quality across all artifacts:
 
 **When to use**: Run periodically (before milestones, design reviews, or procurement decisions) to identify gaps and ensure governance standards are maintained.
 
-### Phase 14: Compliance Assessment (UK Government)
-For UK Government and public sector projects:
+### Phase 14: Compliance Assessment
+**`/arckit.soc2`** → SOC 2 Assessment
 
-**`/arckit.service-assessment`** → GDS Service Standard assessment preparation
+Assess compliance with Trust Service Criteria:
+- Security (Common Criteria)
+- Availability
+- Confidentiality
+- Processing Integrity
+- Privacy
 
-Prepare for mandatory GDS Service Standard assessments:
-- Analyze evidence against all 14 Service Standard points
-- Identify gaps for alpha, beta, or live assessments
-- Generate RAG (Red/Amber/Green) ratings and overall readiness score
-- Provide actionable recommendations with priorities and timelines
-- Include assessment day preparation guidance
-- Map ArcKit artifacts to Service Standard evidence requirements
+**`/arckit.iso27001`** → ISO 27001 Assessment
 
-Run at end of Discovery (for alpha prep), mid-Beta (for beta prep), or before Live to ensure readiness.
+Assess compliance with ISO 27001:2022 controls:
+- Organizational controls
+- People controls
+- Physical controls
+- Technological controls
 
-**`/arckit.tcop`** → Technology Code of Practice assessment
+**`/arckit.solvency2`** → Solvency II Pillar 2 Governance
 
-Assess compliance with all 13 TCoP points:
-- Point 1: Define user needs
-- Point 2: Make things accessible
-- Point 3: Be open and use open source
-- Point 4: Make use of open standards
-- Point 5: Use cloud first
-- Point 6: Make things secure
-- Point 7: Make privacy integral
-- Point 8: Share, reuse and collaborate
-- Point 9: Integrate and adapt technology
-- Point 10: Make better use of data
-- Point 11: Define your purchasing strategy
-- Point 12: Meet the Digital Spend Controls
-- Point 13: Define your responsible AI use
+Assess governance and risk management requirements for insurers:
+- System of Governance
+- Key Functions (Risk, Compliance, Audit, Actuarial)
+- Risk Management System
+- ORSA Process
 
-**`/arckit.secure`** → UK Government Secure by Design assessment
+**`/arckit.orsa`** → ORSA Reporting
 
-Security compliance assessment:
-- NCSC Cloud Security Principles
-- NCSC Cyber Assessment Framework (CAF)
-- Cyber Essentials / Cyber Essentials Plus
-- UK GDPR and DPA 2018 compliance
-- Security architecture review
-- Threat modeling
+Generate Own Risk and Solvency Assessment report structure:
+- Business Strategy
+- Risk Profile
+- Solvency Needs
+- Stress Testing
 
-**`/arckit.ai-playbook`** → AI Playbook compliance (for AI systems)
+**`/arckit.secure`** → Secure by Design Assessment
 
-Responsible AI assessment:
-- AI ethics principles
-- Transparency and explainability
-- Fairness and bias mitigation
-- Data governance for AI
-- Human oversight mechanisms
-- Impact assessment
-
-**`/arckit.atrs`** → Algorithmic Transparency Recording Standard
-
-Generate ATRS record for algorithmic decision-making:
-- Algorithm details and logic
-- Purpose and use case
-- Data sources and data quality
-- Performance metrics and monitoring
-- Impact assessment and mitigation
-
-**For MOD Projects**:
-
-**`/arckit.mod-secure`** → MOD Secure by Design assessment
-
-MOD-specific security compliance:
-- JSP 440 (Defence Project & Programme Management)
-- Information Assurance Maturity Model (IAMM)
-- MOD Security clearances and vetting
-- STRAP classification handling
-- Security Operating Procedures (SyOPs)
-- Supplier attestation requirements
-
-**`/arckit.jsp-936`** → MOD JSP 936 AI Assurance Documentation
-
-For defence projects using AI/ML systems:
-- JSP 936 (Dependable Artificial Intelligence in Defence)
-- 5 Ethical Principles (Human-Centricity, Responsibility, Understanding, Bias & Harm Mitigation, Reliability)
-- 5 Risk Classification Levels (Critical to Minor)
-- 8 AI Lifecycle Phases (Planning to Quality Assurance)
-- Approval pathways (2PUS/Ministerial → Defence-Level → TLB-Level)
-- RAISOs and Ethics Manager governance
-- Human-AI teaming strategy and continuous monitoring
+General security assessment covering:
+- ISO 27001 / SOC 2 Controls
+- Cloud Security Principles
+- GDPR Security Requirements
+- Threat Modeling
 
 ### Phase 15: Project Story & Reporting
 **`/arckit.story`** → Generate comprehensive project story
@@ -510,7 +391,7 @@ Create narrative historical record with complete timeline analysis:
 - **Complete Timeline**: All events from git log or file modification dates with days-from-start
 - **8 Narrative Chapters**: Foundation → Business Case → Requirements → Research → Procurement → Design → Delivery → Compliance
 - **Traceability Demonstration**: End-to-end chains with Mermaid diagrams showing stakeholder → goals → requirements → stories → sprints
-- **Governance Achievements**: Showcase compliance (TCoP, Service Standard, NCSC CAF), risk management, decision rationale
+- **Governance Achievements**: Showcase compliance (SOC2, ISO 27001), risk management, decision rationale
 - **Strategic Context**: Wardley Map insights, build vs buy decisions, vendor selection rationale
 - **Lessons Learned**: Pacing analysis, timeline deviations, recommendations for future projects
 - **Comprehensive Appendices**: Artifact register, chronological activity log, DSM, command reference, glossary
@@ -560,7 +441,7 @@ payment-modernization/
 ├── projects/
 │   └── 001-payment-gateway/
 │       ├── stakeholder-drivers.md         # Stakeholder analysis
-│       ├── risk-register.md                # Risk register (Orange Book)
+│       ├── risk-register.md                # Risk register
 │       ├── sobc.md                         # Strategic Outline Business Case
 │       ├── requirements.md                 # Comprehensive requirements
 │       ├── data-model.md                   # Data model with ERD, GDPR compliance
@@ -600,25 +481,22 @@ payment-modernization/
 |---------|---------|--------|
 | `/arckit.principles` | Establish architecture governance | `memory/architecture-principles.md` |
 | `/arckit.stakeholders` | Analyze stakeholder drivers, goals, and outcomes | `projects/XXX/stakeholder-drivers.md` |
-| `/arckit.risk` | Create comprehensive risk register (Orange Book) | `projects/XXX/risk-register.md` |
-| `/arckit.sobc` | Create Strategic Outline Business Case (Green Book 5-case) | `projects/XXX/sobc.md` |
+| `/arckit.risk` | Create comprehensive risk register | `projects/XXX/risk-register.md` |
+| `/arckit.sobc` | Create Strategic Outline Business Case | `projects/XXX/sobc.md` |
 | `/arckit.requirements` | Define comprehensive requirements | `projects/XXX/requirements.md` |
-| `/arckit.platform-design` | Design multi-sided platform strategy using Platform Design Toolkit (8 PDT canvases) | `projects/XXX/platform-design.md` |
+| `/arckit.platform-design` | Design multi-sided platform strategy | `projects/XXX/platform-design.md` |
 | `/arckit.data-model` | Create data model with ERD, GDPR compliance, data governance | `projects/XXX/data-model.md` |
 | `/arckit.research` | Research technology, services, and products with build vs buy analysis | `projects/XXX/research-findings.md` |
 | `/arckit.wardley` | Create strategic Wardley Maps for build vs buy and procurement strategy | `projects/XXX/wardley-maps/{map-name}.md` |
 | `/arckit.roadmap` | Create multi-year strategic architecture roadmap with capability evolution and governance | `projects/XXX/roadmap.md` |
-| `/arckit.adr` | Document architectural decisions with MADR v4.0 format and UK Government compliance | `projects/XXX/decisions/ADR-{NUM}-{title}.md` |
+| `/arckit.adr` | Document architectural decisions with MADR v4.0 format | `projects/XXX/decisions/ADR-{NUM}-{title}.md` |
 | `/arckit.sow` | Generate vendor RFP | `projects/XXX/sow.md` |
-| `/arckit.dos` | Generate Digital Outcomes and Specialists (DOS) procurement docs for UK Digital Marketplace | `projects/XXX/procurement/dos-requirements.md` |
-| `/arckit.gcloud-search` | Search G-Cloud services on UK Digital Marketplace with live WebSearch | `projects/XXX/procurement/gcloud-requirements.md` |
-| `/arckit.gcloud-clarify` | Validate G-Cloud services and generate supplier clarification questions | `projects/XXX/procurement/gcloud-clarification-questions.md` |
 
 ### Sprint Planning
 
 | Command | Purpose | Output |
 |---------|---------|--------|
-| `/arckit.backlog` | Generate prioritised product backlog - convert requirements to GDS user stories, organise into sprints | `projects/XXX/backlog.md` (+ optional CSV/JSON) |
+| `/arckit.backlog` | Generate prioritised product backlog - convert requirements to user stories, organise into sprints | `projects/XXX/backlog.md` (+ optional CSV/JSON) |
 
 ### Vendor Management
 
@@ -644,14 +522,6 @@ payment-modernization/
 | Command | Purpose | Output |
 |---------|---------|--------|
 | `/arckit.servicenow` | Generate ServiceNow service design (CMDB, SLAs, incident/change management, monitoring) | `projects/XXX/servicenow-design.md` |
-| `/arckit.operationalize` | Create operational readiness pack with support model, runbooks, DR/BCP, on-call, and handover | `projects/XXX/operational-readiness.md` |
-
-### DevOps & MLOps
-
-| Command | Purpose | Output |
-|---------|---------|--------|
-| `/arckit.devops` | Create DevOps strategy with CI/CD pipelines, IaC, container orchestration, and developer experience | `projects/XXX/devops-strategy.md` |
-| `/arckit.mlops` | Create MLOps strategy with model lifecycle, training pipelines, serving, monitoring, and governance | `projects/XXX/mlops-strategy.md` |
 
 ### Traceability
 
@@ -665,22 +535,16 @@ payment-modernization/
 |---------|---------|--------|
 | `/arckit.analyze` | Comprehensive governance quality analysis across all artifacts | `projects/XXX/analysis-report.md` |
 
-### UK Government Compliance
+### Compliance Assessment
 
 | Command | Purpose | Output |
 |---------|---------|--------|
-| `/arckit.service-assessment` | Prepare for GDS Service Standard assessment - analyze evidence against 14 points, identify gaps, generate readiness report | `projects/XXX/service-assessment-{phase}-prep.md` |
-| `/arckit.tcop` | Comprehensive Technology Code of Practice assessment (all 13 points, Digital Spend Controls) | `projects/XXX/tcop-review.md` |
-| `/arckit.ai-playbook` | Assess AI Playbook compliance for responsible AI | `projects/XXX/ai-playbook-assessment.md` |
-| `/arckit.atrs` | Generate Algorithmic Transparency Recording Standard (ATRS) record | `projects/XXX/atrs-record.md` |
-
-### Security Assessment
-
-| Command | Purpose | Output |
-|---------|---------|--------|
-| `/arckit.secure` | UK Government Secure by Design assessment (NCSC CAF, Cyber Essentials, UK GDPR) | `projects/XXX/ukgov-secure-by-design.md` |
-| `/arckit.mod-secure` | MOD Secure by Design assessment (JSP 440, IAMM, security clearances) | `projects/XXX/mod-secure-by-design.md` |
-| `/arckit.jsp-936` | MOD JSP 936 AI assurance documentation for defence AI/ML systems | `projects/XXX/jsp-936-assessment.md` |
+| `/arckit.soc2` | SOC 2 Trust Service Criteria assessment | `projects/XXX/soc2-assessment.md` |
+| `/arckit.iso27001` | ISO 27001:2022 assessment | `projects/XXX/iso27001-assessment.md` |
+| `/arckit.solvency2` | Solvency II Pillar 2 governance assessment | `projects/XXX/solvency2-governance.md` |
+| `/arckit.orsa` | Own Risk and Solvency Assessment (ORSA) report | `projects/XXX/orsa-report.md` |
+| `/arckit.secure` | Secure by Design assessment (ISO 27001 / SOC 2) | `projects/XXX/secure-by-design.md` |
+| `/arckit.dpia` | Data Protection Impact Assessment (GDPR) | `projects/XXX/dpia.md` |
 
 ---
 
@@ -705,7 +569,7 @@ Architecture diagrams visualize system structure, interactions, and deployment f
 - **Technical Communication**: Share architecture with stakeholders
 - **Design Documentation**: Document current and future state
 - **Vendor Evaluation**: Compare vendor technical approaches
-- **UK Government Compliance**: Visualize Cloud First, GOV.UK services, PII handling
+- **Compliance**: Visualize security boundaries and PII handling
 
 ### Diagram Types
 
@@ -716,20 +580,17 @@ ArcKit supports 6 essential diagram types based on the C4 Model and enterprise a
 | **C4 Context** | Level 1 | System in context with users and external systems | After requirements, to show system boundaries |
 | **C4 Container** | Level 2 | Technical containers and technology choices | After HLD, for vendor review |
 | **C4 Component** | Level 3 | Internal components within a container | After DLD, for implementation |
-| **Deployment** | Infrastructure | Cloud resources and network topology | Cloud First compliance, cost estimation |
+| **Deployment** | Infrastructure | Cloud resources and network topology | Compliance compliance, cost estimation |
 | **Sequence** | Interaction | API flows and request/response patterns | Integration requirements, API design |
-| **Data Flow** | Data | How data moves, PII handling, GDPR compliance | UK GDPR, DPIA requirements |
+| **Data Flow** | Data | How data moves, PII handling, GDPR compliance | GDPR, DPIA requirements |
 
-Use `/arckit.diagram` directly, or supply an explicit type such as `context`, `container`, `sequence`, or `dataflow`. Outputs bundle component inventories with Wardley evolution tags, built-in GOV.UK compliance scaffolding (Notify, Pay, Design System), Cloud First network patterns, GDPR annotations, and traceability back to requirements and tests. For full examples, browse the diagram folders in `arckit-test-project-v2-hmrc-chatbot` and `arckit-test-project-v6-patent-system`.
+Use `/arckit.diagram` directly, or supply an explicit type such as `context`, `container`, `sequence`, or `dataflow`. Outputs bundle component inventories with Wardley evolution tags, built-in compliance scaffolding, network patterns, GDPR annotations, and traceability back to requirements and tests.
 
 ## ServiceNow Service Management Design
 
 ArcKit turns architecture artefacts into an operations-ready ServiceNow pack. The `/arckit.servicenow` command builds:
 - CMDB hierarchies, SLAs, and change risk straight from requirements, diagrams, and Wardley Maps.
 - ITIL-aligned runbooks covering incident, change, monitoring, and transition activities.
-- UK government extras such as GDS Service Standard, Technology Code of Practice, and GOV.UK Pay/Notify dependencies when relevant.
-
-For full outputs, explore the public demos (for example `arckit-test-project-v7-nhs-appointment` and `arckit-test-project-v1-m365`) where the generated ServiceNow design files and checklists are published end-to-end.
 
 ---
 

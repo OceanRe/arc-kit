@@ -7,7 +7,7 @@
 | **Document ID** | ARC-[PROJECT_ID]-EVAL-v[VERSION] |
 | **Document Type** | [DOCUMENT_TYPE_NAME] |
 | **Project** | [PROJECT_NAME] (Project [PROJECT_ID]) |
-| **Classification** | [PUBLIC / OFFICIAL / OFFICIAL-SENSITIVE / SECRET] |
+| **Classification** | [PUBLIC / INTERNAL / CONFIDENTIAL / RESTRICTED] |
 | **Status** | [DRAFT / IN_REVIEW / APPROVED / PUBLISHED / SUPERSEDED / ARCHIVED] |
 | **Version** | [VERSION] |
 | **Created Date** | [YYYY-MM-DD] |
@@ -173,7 +173,7 @@ Technical proposals are scored **blind to cost** to ensure unbiased evaluation.
 | **1.1 Architecture Quality** | 10 | • Is the architecture well-designed, scalable, and maintainable?<br>• Does it follow modern best practices (microservices, cloud-native, etc.)?<br>• Are components loosely coupled with clear boundaries?<br>• Is the architecture aligned with our enterprise principles? |
 | **1.2 Technology Stack** | 8 | • Are technology choices appropriate for requirements?<br>• Do choices align with our approved stack or have good justification?<br>• Is the stack modern, supportable, with active community?<br>• Are there lock-in risks or vendor dependencies? |
 | **1.3 Scalability & Performance** | 7 | • Does solution meet performance requirements?<br>• Is horizontal scaling strategy credible?<br>• Are bottlenecks identified and addressed?<br>• Is performance testing approach sound? |
-| **1.4 Security & Compliance** | 6 | • Are security controls comprehensive and appropriate?<br>• Does solution meet compliance requirements (GDPR, HIPAA, etc.)?<br>• Is threat model thoughtful and complete?<br>• Are security best practices followed (encryption, least privilege, etc.)? |
+| **1.4 Security & Compliance** | 6 | • Are security controls comprehensive and appropriate?<br>• Does solution meet compliance requirements (GDPR, SOC 2, etc.)?<br>• Is threat model thoughtful and complete?<br>• Are security best practices followed (encryption, least privilege, etc.)? |
 | **1.5 Integration Approach** | 4 | • Is integration strategy with existing systems sound?<br>• Are integration patterns appropriate (API, event-driven, etc.)?<br>• Are integration risks identified and mitigated? |
 
 #### Scoring Rubric (Per Subcriterion)

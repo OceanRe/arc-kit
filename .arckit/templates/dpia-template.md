@@ -7,7 +7,7 @@
 | **Document ID** | {document_id} |
 | **Document Type** | Data Protection Impact Assessment |
 | **Project** | [PROJECT_NAME] (Project [PROJECT_ID]) |
-| **Classification** | [PUBLIC / OFFICIAL / OFFICIAL-SENSITIVE / SECRET] |
+| **Classification** | [PUBLIC / INTERNAL / CONFIDENTIAL / RESTRICTED] |
 | **Status** | [DRAFT / IN_REVIEW / APPROVED / PUBLISHED / SUPERSEDED / ARCHIVED] |
 | **Version** | [VERSION] |
 | **Created Date** | [YYYY-MM-DD] |
@@ -45,18 +45,18 @@
 
 **Recommendation**: [Proceed/Do not proceed/Proceed with conditions]
 
-**ICO Consultation Required**: [YES/NO]
+**Regulator Consultation Required**: [YES/NO]
 
 ---
 
 ## 1. DPIA Screening Assessment
 
-### 1.1 Screening Criteria (ICO's 9 Criteria)
+### 1.1 Screening Criteria (Standard High-Risk Criteria)
 
 | # | Criterion | YES/NO | Evidence |
 |---|-----------|--------|----------|
-| 1 | **Evaluation or scoring** including profiling and predicting (e.g., credit scoring, marketing preferences, location data, loyalty programs) | [YES/NO] | [Evidence from requirements/data model] |
-| 2 | **Automated decision-making with legal or similarly significant effect** (e.g., automatic refusal of credit, e-recruiting without human intervention) | [YES/NO] | [Evidence] |
+| 1 | **Evaluation or scoring** including profiling and predicting (e.g., credit scoring, marketing preferences, location data, loyalty programs, insurance underwriting) | [YES/NO] | [Evidence from requirements/data model] |
+| 2 | **Automated decision-making with legal or similarly significant effect** (e.g., automatic refusal of credit/insurance, e-recruiting without human intervention) | [YES/NO] | [Evidence] |
 | 3 | **Systematic monitoring** of data subjects (e.g., CCTV, tracking, monitoring employee productivity/health, location tracking) | [YES/NO] | [Evidence] |
 | 4 | **Sensitive data or data of highly personal nature** (special category data: race, health, biometric, genetic; criminal offence data; children's data) | [YES/NO] | [Evidence from data model PII analysis] |
 | 5 | **Processing on a large scale** (consider: number of data subjects, volume of data, duration, geographical extent) | [YES/NO] | [Evidence - N data subjects, N records, N years] |
@@ -156,7 +156,7 @@
 - **Data subjects**: [N] individuals
 - **Storage size**: [N GB/TB]
 - **Transaction rate**: [N] per day/month
-- **Geographic scope**: [UK-wide / Regional / Local / International]
+- **Geographic scope**: [National / Regional / Global]
 
 **Scale Classification**: [Small scale / Large scale]
 - Small scale: Fewer than 10,000 data subjects, limited geographic area, low volume
@@ -194,18 +194,17 @@
 #### What is the relationship with data subjects?
 
 **Relationship Type**:
-- [ ] Customer/client
+- [ ] Customer/policyholder
 - [ ] Employee
-- [ ] Citizen/public service user
+- [ ] Claimant
 - [ ] Patient
-- [ ] Student
 - [ ] Supplier/partner
 - [ ] Website visitor
 - [ ] Other: [SPECIFY]
 
 **Power Balance**:
-- [ ] Equal relationship (e.g., commercial transaction)
-- [ ] Imbalanced relationship (e.g., employer-employee, government-citizen)
+- [ ] Equal relationship (e.g., B2B commercial transaction)
+- [ ] Imbalanced relationship (e.g., employer-employee, insurer-insured)
 - If imbalanced: Describe safeguards to protect data subjects: [SAFEGUARDS]
 
 #### How much control do data subjects have?
@@ -221,7 +220,7 @@
 - [ ] Can port data to another controller
 - [ ] Can object to automated decisions
 
-**Limitations on Control**: [Describe any limitations and legal basis]
+**Limitations on Control**: [Describe any limitations and legal basis, e.g., anti-fraud requirements]
 
 #### Would data subjects expect this processing?
 
@@ -278,7 +277,7 @@
 **Consultation Method**:
 - [ ] Survey
 - [ ] Focus groups
-- [ ] Public consultation
+- [ ] Customer panel
 - [ ] User testing
 - [ ] Privacy notice + feedback mechanism
 - [ ] Not consulted (explain why: [REASON])
@@ -321,7 +320,7 @@
 
 ### 4.1 Lawful Basis Assessment
 
-**Primary Lawful Basis** (GDPR Article 6):
+**Primary Lawful Basis** (GDPR Article 6 or equivalent):
 
 - [ ] **(a) Consent** - Data subject has given clear consent for processing for a specific purpose
   - Evidence of consent: [DESCRIBE mechanism]
@@ -329,7 +328,7 @@
   - Withdrawal mechanism: [DESCRIBE]
 
 - [ ] **(b) Contract** - Processing is necessary to perform a contract with the data subject or to take steps to enter into a contract
-  - Contract type: [DESCRIBE]
+  - Contract type: [DESCRIBE, e.g., Insurance Policy]
   - How processing is necessary: [EXPLAIN]
 
 - [ ] **(c) Legal obligation** - Processing is necessary to comply with the law
@@ -344,13 +343,13 @@
   - Statutory basis: [CITE legislation]
 
 - [ ] **(f) Legitimate interests** - Processing is necessary for legitimate interests, except where overridden by data subject rights
-  - Legitimate interest: [DESCRIBE]
+  - Legitimate interest: [DESCRIBE, e.g., Fraud prevention]
   - Balancing test completed: [YES] (see Section 4.4)
   - Interests do not override data subject rights: [ASSESSMENT]
 
 **Justification for Chosen Basis**: [DETAILED EXPLANATION]
 
-### 4.2 Special Category Data Basis (Article 9)
+### 4.2 Special Category Data Basis (Article 9 or equivalent)
 
 **Applicable**: [YES/NO]
 
@@ -361,13 +360,13 @@ If YES, select condition(s):
 - [ ] **(c) Vital interests** (data subject physically/legally incapable of consent)
 - [ ] **(d) Legitimate activities** of foundation/association/non-profit (with safeguards)
 - [ ] **(e) Data manifestly made public** by data subject
-- [ ] **(f) Legal claims** or judicial acts
-- [ ] **(g) Substantial public interest** (with UK law basis)
+- [ ] **(f) Legal claims** or judicial acts (often used for claims handling)
+- [ ] **(g) Substantial public interest** (with legal basis, e.g., insurance purpose)
 - [ ] **(h) Health/social care** (with health professional or statutory obligation)
 - [ ] **(i) Public health**
 - [ ] **(j) Archiving/research/statistics** (with safeguards)
 
-**UK DPA 2018 Schedule 1 Condition**: [CITE specific condition if using (g)]
+**Local Law Condition**: [CITE specific condition if using (g), e.g. Insurance Act]
 
 **Justification**: [DETAILED EXPLANATION]
 
@@ -422,7 +421,7 @@ If YES, select condition(s):
 
 **Risk Categories to Consider**:
 - Physical harm (safety, health risks)
-- Material damage (financial loss, fraud, identity theft, discrimination affecting employment/services)
+- Material damage (financial loss, fraud, identity theft, discrimination affecting employment/services/insurance premiums)
 - Non-material damage (distress, anxiety, reputational damage, loss of confidentiality, loss of control over personal data, discrimination, disadvantage)
 
 ### 5.2 Inherent Risks (Before Mitigation)
@@ -431,7 +430,7 @@ If YES, select condition(s):
 |---------|------------------|-------------------------|------------|----------|------------|-------------|
 | DPIA-001 | Unauthorised access to [data type] | [Description of harm to individuals] | [Low/Medium/High] | [Low/Medium/High/Very High] | [LOW/MEDIUM/HIGH/VERY HIGH] | Security vulnerability |
 | DPIA-002 | Data breach exposing [data type] | [Description of harm] | [Likelihood] | [Severity] | [Risk Level] | [Source] |
-| DPIA-003 | Inaccurate data leading to wrong decisions | [Description of harm] | [Likelihood] | [Severity] | [Risk Level] | Data quality |
+| DPIA-003 | Inaccurate data leading to wrong decisions | [Description of harm, e.g. claim denial] | [Likelihood] | [Severity] | [Risk Level] | Data quality |
 | DPIA-004 | Excessive data retention | [Description of harm] | [Likelihood] | [Severity] | [Risk Level] | Retention policy |
 | DPIA-005 | Third party misuse of data | [Description of harm] | [Likelihood] | [Severity] | [Risk Level] | Third party failure |
 | DPIA-006 | Algorithmic bias/discrimination (if AI/ML) | [Description of harm to protected groups] | [Likelihood] | [Severity] | [Risk Level] | Algorithm design |
@@ -518,11 +517,11 @@ If YES, select condition(s):
 - [ ] **Privacy Policy** - Clear, accessible privacy notice for data subjects
 - [ ] **Data Protection Policy** - Internal policy for staff
 - [ ] **Retention and Disposal Policy** - Defined retention periods and deletion procedures
-- [ ] **Data Breach Response Plan** - 72-hour notification to ICO, data subject notification
+- [ ] **Data Breach Response Plan** - Notification timelines, data subject notification
 - [ ] **Data Subject Rights Procedures** - SAR, rectification, erasure, portability processes
 
 **Training and Awareness**:
-- [ ] **Staff training** - GDPR awareness, privacy principles, secure handling
+- [ ] **Staff training** - Awareness, privacy principles, secure handling
 - [ ] **Role-specific training** - Additional training for those with data access
 - [ ] **Regular refresher training** - Frequency: [SPECIFY]
 
@@ -539,7 +538,7 @@ If YES, select condition(s):
 - [ ] **Regular reviews** - DPIA reviewed every [N] months or on significant change
 
 **Data Subject Rights Facilitation**:
-- [ ] **Subject Access Request (SAR) process** - Response within 1 month
+- [ ] **Subject Access Request (SAR) process** - Response within statutory timeframe
 - [ ] **Rectification process** - Mechanism to correct inaccurate data
 - [ ] **Erasure process** - "Right to be forgotten" implementation
 - [ ] **Portability process** - Export data in machine-readable format
@@ -577,7 +576,7 @@ If YES, select condition(s):
 **Acceptability Assessment**:
 - [ ] All residual risks are LOW or MEDIUM → ACCEPTABLE
 - [ ] Some residual risks are HIGH → ACCEPTABLE WITH CONDITIONS (describe conditions)
-- [ ] Any residual risks are VERY HIGH → NOT ACCEPTABLE (ICO consultation required)
+- [ ] Any residual risks are VERY HIGH → NOT ACCEPTABLE (Regulator consultation required)
 
 **Conditions for Acceptance** (if applicable):
 1. [Condition 1]
@@ -585,28 +584,28 @@ If YES, select condition(s):
 
 ---
 
-## 7. ICO Prior Consultation
+## 7. Regulator Prior Consultation
 
-**ICO Consultation Required**: [YES/NO]
+**Regulator Consultation Required**: [YES/NO]
 
-**Trigger**: ICO prior consultation is required if:
+**Trigger**: Prior consultation is required if:
 - Residual risk remains **HIGH** or **VERY HIGH** after mitigation, AND
 - Processing will go ahead despite the high residual risk
 
-**ICO Consultation Details** (if required):
+**Consultation Details** (if required):
 
 | Field | Value |
 |-------|-------|
-| ICO Reference Number | [REF-NUMBER] |
+| Reference Number | [REF-NUMBER] |
 | Consultation Date | [DATE] |
-| ICO Case Officer | [NAME] |
-| ICO Advice Received | [DATE] |
-| ICO Recommendations | [SUMMARY] |
-| ICO Approval | [APPROVED/APPROVED WITH CONDITIONS/NOT APPROVED] |
+| Case Officer | [NAME] |
+| Advice Received | [DATE] |
+| Recommendations | [SUMMARY] |
+| Approval | [APPROVED/APPROVED WITH CONDITIONS/NOT APPROVED] |
 | Conditions | [LIST CONDITIONS] |
 | How Conditions Addressed | [SUMMARY] |
 
-**ICO Advice Summary**:
+**Advice Summary**:
 - [Advice point 1]
 - [Advice point 2]
 - [Advice point 3]
@@ -647,16 +646,16 @@ If YES, select condition(s):
 
 ### 9.1 Link to Security Controls
 
-**Security Assessment Reference**: `projects/{project_id}/secure-by-design-assessment.md`
+**Security Assessment Reference**: `projects/{project_id}/security-assessment.md`
 
 **DPIA Mitigations → Security Controls Mapping**:
 
-| DPIA Mitigation | Security Control | NCSC CAF Principle | Implementation Status |
+| DPIA Mitigation | Security Control | Framework Principle | Implementation Status |
 |-----------------|------------------|--------------------|-----------------------|
-| Encryption at rest | Data security (encryption) | A.3 Asset Management | [Implemented/Planned] |
-| Access controls | Identity and access management | B.1 Identity and Access | [Implemented/Planned] |
-| Audit logging | Monitoring and audit | A.1 Governance | [Implemented/Planned] |
-| Staff training | Security awareness | C.1 People | [Implemented/Planned] |
+| Encryption at rest | Data security (encryption) | ISO 27001 A.10 | [Implemented/Planned] |
+| Access controls | Identity and access management | ISO 27001 A.9 | [Implemented/Planned] |
+| Audit logging | Monitoring and audit | ISO 27001 A.12.4 | [Implemented/Planned] |
+| Staff training | Security awareness | ISO 27001 A.7.2 | [Implemented/Planned] |
 
 **Security Controls Feed into DPIA**: Security controls reduce likelihood of unauthorized access, data breach, and misuse risks.
 
@@ -683,7 +682,7 @@ If YES, select condition(s):
 - [ ] New technology introduced
 - [ ] New risks identified (e.g., new attack vectors, regulatory changes)
 - [ ] Data breach or security incident occurs
-- [ ] ICO guidance changes
+- [ ] Regulatory guidance changes
 - [ ] Data subjects raise concerns
 - [ ] Periodic review date reached
 
@@ -741,11 +740,11 @@ If YES, select condition(s):
 | Artifact | Location | Information Extracted |
 |----------|----------|----------------------|
 | **Architecture Principles** | `.arckit/memory/architecture-principles.md` | Privacy by Design, Data Minimization principles |
-| **Data Model** | `projects/{project_id}/data-model.md` | Entities, PII inventory, special category data, GDPR lawful basis, retention periods |
+| **Data Model** | `projects/{project_id}/data-model.md` | Entities, PII inventory, special category data, lawful basis, retention periods |
 | **Requirements** | `projects/{project_id}/requirements.md` | Data requirements (DR-xxx), processing purposes |
 | **Stakeholder Analysis** | `projects/{project_id}/stakeholder-drivers.md` | Data subject categories, vulnerable groups, RACI for data governance roles |
 | **Risk Register** | `projects/{project_id}/risk-register.md` | Existing data protection risks |
-| **Secure by Design Assessment** | `projects/{project_id}/secure-by-design-assessment.md` | Security controls used as DPIA mitigations |
+| **Security Assessment** | `projects/{project_id}/security-assessment.md` | Security controls used as DPIA mitigations |
 
 ### 11.2 Traceability Matrix: Data → Requirements → DPIA
 
@@ -768,11 +767,9 @@ If YES, select condition(s):
 | Artifact | How DPIA Informs It |
 |----------|---------------------|
 | **Risk Register** | DPIA risks (DPIA-001, etc.) added as data protection/compliance risks |
-| **Secure by Design Assessment** | DPIA mitigations become security control requirements |
+| **Security Assessment** | DPIA mitigations become security control requirements |
 | **Vendor HLD Review** | Vendor design must address DPIA risks and implement mitigations |
 | **Vendor DLD Review** | Detailed technical controls must match DPIA mitigation requirements |
-| **AI Playbook Assessment** | DPIA algorithmic bias findings inform AI ethics assessment |
-| **Service Assessment (GDS)** | DPIA demonstrates Point 5 (data and privacy) compliance |
 | **Procurement (SOW)** | DPIA requirements flow into vendor RFP requirements |
 
 ---
@@ -781,39 +778,39 @@ If YES, select condition(s):
 
 ### 12.1 Rights Checklist
 
-**Right of Access (Article 15)**:
+**Right of Access**:
 - [ ] Process implemented: [Describe SAR process]
-- [ ] Response time: Within 1 month (extendable by 2 months if complex)
+- [ ] Response time: Within 1 month (extendable if complex)
 - [ ] Identity verification: [Describe verification method]
 - [ ] Information provided: Copy of data, processing purpose, categories, recipients, retention period, rights
 - [ ] Free of charge (unless excessive/unfounded)
 
-**Right to Rectification (Article 16)**:
+**Right to Rectification**:
 - [ ] Process implemented: [Describe rectification process]
 - [ ] Verification: [How accuracy is verified]
 - [ ] Notification: Recipients notified of rectifications
 
-**Right to Erasure (Article 17)**:
+**Right to Erasure**:
 - [ ] Process implemented: [Describe deletion process]
 - [ ] Exceptions: [When erasure cannot be granted - legal obligation, public interest, etc.]
 - [ ] Third parties notified: [Process to notify processors/recipients]
 
-**Right to Restriction of Processing (Article 18)**:
+**Right to Restriction of Processing**:
 - [ ] Process implemented: [Describe restriction mechanism]
 - [ ] Technical implementation: [How data is marked/flagged as restricted]
 
-**Right to Data Portability (Article 20)**:
+**Right to Data Portability**:
 - [ ] Applicable: [YES/NO - only for automated processing on consent/contract basis]
 - [ ] Process implemented: [Describe export process]
 - [ ] Format: Machine-readable (JSON, CSV, XML)
 - [ ] Direct transmission: [Can data be transmitted to another controller?]
 
-**Right to Object (Article 21)**:
+**Right to Object**:
 - [ ] Process implemented: [Describe objection process]
 - [ ] Basis: Applicable for public task and legitimate interests processing
 - [ ] Marketing opt-out: [Describe opt-out mechanism]
 
-**Rights Related to Automated Decision-Making (Article 22)**:
+**Rights Related to Automated Decision-Making**:
 - [ ] Applicable: [YES/NO - is there solely automated decision-making?]
 - [ ] Safeguards: Human oversight, explanation, ability to challenge decision
 - [ ] Process: [Describe how individuals can request human review]
@@ -827,7 +824,7 @@ If YES, select condition(s):
 4. **Acknowledgement**: Acknowledgement sent within [N] days
 5. **Retrieval**: Data retrieved from [systems/databases]
 6. **Review**: Legal/DPO review for exemptions or complexities
-7. **Response**: Response provided within 1 month
+7. **Response**: Response provided within statutory timeframe
 8. **Escalation**: Complex requests escalated to DPO
 
 **Training**: Staff trained on rights fulfillment - [Training frequency]
@@ -849,18 +846,18 @@ If YES:
 
 ### 13.2 Transfer Safeguards
 
-**For countries WITH UK adequacy decision**:
+**For countries WITH adequacy decision**:
 - [ ] No additional safeguards required beyond standard DPIA measures
 
 **For countries WITHOUT adequacy decision**:
-- [ ] **Standard Contractual Clauses (SCCs)** - UK ICO approved SCCs signed with recipient
-  - SCC version: [International Data Transfer Agreement (IDTA) / Addendum to EU SCCs]
+- [ ] **Standard Contractual Clauses (SCCs)** - Approved SCCs signed with recipient
+  - SCC version: [Latest approved version]
   - Date signed: [DATE]
   - Recipient guarantees: [Summary of guarantees]
 
 - [ ] **Binding Corporate Rules (BCRs)** - Approved BCRs in place
   - BCR approval date: [DATE]
-  - ICO reference: [REF]
+  - Regulator reference: [REF]
 
 - [ ] **Derogations** (only in exceptional circumstances)
   - Explicit consent obtained: [YES/NO]
@@ -916,7 +913,7 @@ If YES:
 
 **Algorithmic Processing**: [YES/NO]
 
-If YES, also complete `/arckit.ai-playbook` and `/arckit.atrs` assessments.
+If YES, also complete AI governance assessment.
 
 ### 15.1 Algorithm Description
 
@@ -977,8 +974,6 @@ If YES, also complete `/arckit.ai-playbook` and `/arckit.atrs` assessments.
 
 **Explanation Mechanism**:
 - [Describe how decisions are explained to data subjects]
-
-**ATRS Compliance**: [Link to ATRS record at `projects/{project_id}/atrs-record.md`]
 
 ---
 
@@ -1051,9 +1046,9 @@ If YES, also complete `/arckit.ai-playbook` and `/arckit.atrs` assessments.
 
 ---
 
-## Appendix A: ICO DPIA Screening Checklist
+## Appendix A: DPIA Screening Checklist
 
-Full screening questionnaire (9 criteria) with detailed YES/NO/N/A responses:
+Full screening questionnaire (Standard criteria) with detailed YES/NO/N/A responses:
 
 1. ☐ Evaluation or scoring (including profiling)
 2. ☐ Automated decision-making with legal/significant effect
@@ -1067,32 +1062,32 @@ Full screening questionnaire (9 criteria) with detailed YES/NO/N/A responses:
 
 ---
 
-## Appendix B: GDPR Article 35 Requirements Checklist
+## Appendix B: Data Protection Compliance Checklist
 
-| Article 35 Requirement | Addressed in Section | Complete? |
-|------------------------|---------------------|-----------|
+| Requirement | Addressed in Section | Complete? |
+|-------------|---------------------|-----------|
 | Systematic description of processing | Section 2 | ✓ |
 | Purposes of processing | Section 2.4 | ✓ |
 | Assessment of necessity and proportionality | Section 4 | ✓ |
 | Assessment of risks to data subjects | Section 5 | ✓ |
 | Measures to address risks | Section 6 | ✓ |
 | Safeguards, security measures | Section 6 | ✓ |
-| Demonstrate compliance with GDPR | Throughout | ✓ |
+| Demonstrate compliance with principles | Throughout | ✓ |
 
 ---
 
 ## Appendix C: Data Protection Principles Compliance
 
-**GDPR Article 5 Principles**:
+**Core Principles**:
 
 | Principle | Assessment | Evidence |
 |-----------|------------|----------|
-| **(a) Lawfulness, fairness, transparency** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | Privacy notice provided, lawful basis identified in Section 4.1 |
-| **(b) Purpose limitation** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | Purposes clearly defined in Section 2.4; no function creep controls in Section 6 |
-| **(c) Data minimization** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | Only necessary data collected (Section 4.3); unnecessary fields removed |
-| **(d) Accuracy** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | Rectification process in Section 12.1; data validation in Section 6.1 |
-| **(e) Storage limitation** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | Retention periods defined in Section 2.2; automated deletion implemented |
-| **(f) Integrity and confidentiality** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | Security measures in Section 6.1; encryption, access controls implemented |
+| **Lawfulness, fairness, transparency** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | Privacy notice provided, lawful basis identified in Section 4.1 |
+| **Purpose limitation** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | Purposes clearly defined in Section 2.4; no function creep controls in Section 6 |
+| **Data minimization** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | Only necessary data collected (Section 4.3); unnecessary fields removed |
+| **Accuracy** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | Rectification process in Section 12.1; data validation in Section 6.1 |
+| **Storage limitation** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | Retention periods defined in Section 2.2; automated deletion implemented |
+| **Integrity and confidentiality** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | Security measures in Section 6.1; encryption, access controls implemented |
 | **Accountability** | [COMPLIANT/NON-COMPLIANT/PARTIAL] | DPIA completed; DPO involved; policies documented |
 
 ---
@@ -1105,16 +1100,15 @@ Full screening questionnaire (9 criteria) with detailed YES/NO/N/A responses:
 | **Data Controller** | The organisation that determines the purposes and means of processing personal data |
 | **Data Processor** | An organisation that processes personal data on behalf of the controller |
 | **Personal Data** | Any information relating to an identified or identifiable natural person |
-| **Special Category Data** | Sensitive personal data (race, health, biometric, etc.) requiring Article 9 basis |
+| **Special Category Data** | Sensitive personal data (race, health, biometric, etc.) requiring stricter protection |
 | **Processing** | Any operation performed on personal data (collection, storage, use, disclosure, deletion) |
 | **Profiling** | Automated processing to evaluate personal aspects (predict performance, behaviour, preferences) |
 | **Pseudonymization** | Processing that prevents identification without additional information kept separately |
 | **Anonymization** | Irreversibly removing identifying information so re-identification is not possible |
-| **Lawful Basis** | Legal ground for processing under GDPR Article 6 (consent, contract, legal obligation, etc.) |
+| **Lawful Basis** | Legal ground for processing (consent, contract, legal obligation, etc.) |
 | **DPIA** | Data Protection Impact Assessment - required for high-risk processing |
-| **ICO** | Information Commissioner's Office - UK data protection supervisory authority |
-| **UK GDPR** | UK General Data Protection Regulation (retained EU GDPR post-Brexit) |
-| **DPA 2018** | Data Protection Act 2018 - UK law supplementing GDPR |
+| **Regulator** | Data protection supervisory authority (e.g., ICO in UK, DPC in Ireland, CNIL in France) |
+| **GDPR** | General Data Protection Regulation (standard framework for data protection) |
 | **SCC** | Standard Contractual Clauses - mechanism for international data transfers |
 
 ---

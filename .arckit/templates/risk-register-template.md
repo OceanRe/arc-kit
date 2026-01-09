@@ -1,4 +1,4 @@
-# Risk Register
+# Insurance Risk Register (Solvency 2 Aligned)
 
 ## Document Information
 
@@ -6,8 +6,8 @@
 |-------|-------|
 | **Document ID** | ARC-[PROJECT_ID]-RISK-v[VERSION] |
 | **Project** | [PROJECT_NAME] (Project [PROJECT_ID]) |
-| **Document Type** | [DOCUMENT_TYPE_NAME] |
-| **Classification** | [PUBLIC / OFFICIAL / OFFICIAL-SENSITIVE] |
+| **Document Type** | Risk Register (Solvency 2 Aligned) |
+| **Classification** | [CONFIDENTIAL / INTERNAL / PUBLIC] |
 | **Version** | [VERSION] |
 | **Status** | [DRAFT / FINAL / ARCHIVED] |
 | **Date** | [YYYY-MM-DD] |
@@ -17,7 +17,7 @@
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| [VERSION] | [DATE] | ArcKit AI | Initial creation from `/arckit.[COMMAND]` command |
+| [VERSION] | [DATE] | ArcKit AI | Initial creation from `/arckit.risk` command |
 
 ---
 
@@ -25,7 +25,7 @@
 
 ### Risk Profile Overview
 
-**Total Risks Identified:** [X] risks across 6 categories
+**Total Risks Identified:** [X] risks across 7 Solvency 2 risk categories
 
 | Risk Level | Inherent | Residual | Change |
 |------------|----------|----------|--------|
@@ -35,22 +35,35 @@
 | **Low** (1-5) | X | Y | ↓ Z% |
 | **TOTAL** | XXX | YYY | ↓ ZZ% |
 
-### Risk Category Distribution
+### Solvency 2 Risk Category Distribution
 
-| Category | Count | Avg Inherent | Avg Residual | Control Effectiveness |
-|----------|-------|--------------|--------------|----------------------|
-| **STRATEGIC** | X | 12.5 | 8.2 | 34% reduction |
-| **OPERATIONAL** | X | 10.3 | 6.5 | 37% reduction |
-| **FINANCIAL** | X | 11.8 | 7.1 | 40% reduction |
-| **COMPLIANCE** | X | 15.2 | 9.8 | 36% reduction |
-| **REPUTATIONAL** | X | 14.5 | 10.2 | 30% reduction |
-| **TECHNOLOGY** | X | 13.1 | 8.5 | 35% reduction |
+| Category | Count | Avg Inherent | Avg Residual | Control Effectiveness | Capital Impact |
+|----------|-------|--------------|--------------|----------------------|----------------|
+| **UNDERWRITING** | X | 12.5 | 8.2 | 34% reduction | [SCR Impact] |
+| **MARKET** | X | 10.3 | 6.5 | 37% reduction | [SCR Impact] |
+| **CREDIT** | X | 11.8 | 7.1 | 40% reduction | [SCR Impact] |
+| **OPERATIONAL** | X | 15.2 | 9.8 | 36% reduction | [SCR Impact] |
+| **LIQUIDITY** | X | 14.5 | 10.2 | 30% reduction | [SCR Impact] |
+| **STRATEGIC** | X | 13.1 | 8.5 | 35% reduction | N/A |
+| **REPUTATIONAL** | X | 11.0 | 7.0 | 36% reduction | N/A |
 
 ### Overall Risk Assessment
 
 **Overall Residual Risk Score:** [YYY]/500
 **Risk Reduction from Controls:** [ZZ]% reduction from inherent risk
-**Risk Profile Status:** ✅ Acceptable | ⚠️ Concerning | ❌ Unacceptable
+**Risk Profile Status:** ✅ Within Risk Appetite | ⚠️ Approaching Limits | ❌ Exceeds Risk Appetite
+
+### Solvency Capital Requirement (SCR) Impact
+
+**Estimated SCR Impact from Identified Risks:**
+
+| Risk Module | Base SCR | Project Impact | Revised SCR |
+|-------------|----------|----------------|-------------|
+| Underwriting Risk | £[X]M | +/- £[Y]M | £[Z]M |
+| Market Risk | £[X]M | +/- £[Y]M | £[Z]M |
+| Credit Risk | £[X]M | +/- £[Y]M | £[Z]M |
+| Operational Risk | £[X]M | +/- £[Y]M | £[Z]M |
+| **Total SCR** | **£[X]M** | **+/- £[Y]M** | **£[Z]M** |
 
 ### Risks Exceeding Appetite
 
@@ -58,31 +71,52 @@
 
 | Risk ID | Title | Category | Score | Appetite | Excess | Escalation |
 |---------|-------|----------|-------|----------|--------|------------|
-| R-001 | ... | STRATEGIC | 20 | 12 | +8 | Board approval required |
+| R-001 | ... | OPERATIONAL | 20 | 12 | +8 | Board/Risk Committee approval required |
 
 ### Top 5 Critical Risks Requiring Immediate Attention
 
-1. **R-001** (STRATEGIC, Critical 20): [Title] - Owner: [Name] - Status: [Status]
-2. **R-002** (TECHNOLOGY, Critical 25): [Title] - Owner: [Name] - Status: [Status]
-3. **R-003** (COMPLIANCE, High 16): [Title] - Owner: [Name] - Status: [Status]
-4. **R-004** (FINANCIAL, High 15): [Title] - Owner: [Name] - Status: [Status]
-5. **R-005** (REPUTATIONAL, High 15): [Title] - Owner: [Name] - Status: [Status]
-
-### Key Findings and Recommendations
-
-**Key Findings:**
-- [Finding 1: e.g., "Heavy concentration of technology risks with single owner (CTO)"]
-- [Finding 2: e.g., "3 critical risks have no mitigations in place"]
-- [Finding 3: e.g., "Financial risks exceed appetite by average of 40%"]
-
-**Recommendations:**
-1. [Recommendation 1: e.g., "Escalate R-001, R-002, R-005 to Steering Committee immediately"]
-2. [Recommendation 2: e.g., "Implement automated monitoring for technology risks"]
-3. [Recommendation 3: e.g., "Obtain Board approval for risks exceeding financial appetite"]
+1. **R-001** (OPERATIONAL, Critical 20): [Title] - Owner: [Name] - Status: [Status]
+2. **R-002** (UNDERWRITING, Critical 25): [Title] - Owner: [Name] - Status: [Status]
+3. **R-003** (MARKET, High 16): [Title] - Owner: [Name] - Status: [Status]
+4. **R-004** (CREDIT, High 15): [Title] - Owner: [Name] - Status: [Status]
+5. **R-005** (LIQUIDITY, High 15): [Title] - Owner: [Name] - Status: [Status]
 
 ---
 
-## A. Risk Matrix Visualization
+## A. Risk Appetite Framework
+
+### Enterprise Risk Appetite Statement
+
+**Risk Appetite Statement:**
+[Organization name] accepts a [conservative/moderate/aggressive] level of risk in pursuit of its strategic objectives. We seek to optimize the risk-return profile while maintaining:
+- Solvency ratio above [X]% of SCR
+- Strong credit ratings (minimum [A-])
+- Stable earnings with volatility below [X]%
+- Protection of policyholder interests
+
+### Risk Appetite by Category
+
+| Risk Category | Appetite Level | Quantitative Limit | Qualitative Statement |
+|---------------|---------------|-------------------|----------------------|
+| **UNDERWRITING** | Medium | Combined ratio < 98% | Accept risks within core expertise |
+| **MARKET** | Low | VaR < £[X]M (99.5%) | Conservative investment strategy |
+| **CREDIT** | Low | Max single exposure < [X]% | High quality counterparties only |
+| **OPERATIONAL** | Very Low | Op risk losses < £[X]M/year | Zero tolerance for control failures |
+| **LIQUIDITY** | Very Low | Liquidity coverage > 150% | Always meet obligations |
+| **STRATEGIC** | Medium | ROE volatility < [X]% | Pursue growth within strategy |
+| **REPUTATIONAL** | Very Low | NPS > [X] | Protect brand and trust |
+
+### Risk Tolerance Thresholds
+
+| Threshold | Definition | Action Required |
+|-----------|------------|-----------------|
+| **Green Zone** | Within appetite | Normal monitoring |
+| **Amber Zone** | 80-100% of appetite | Enhanced monitoring, management action |
+| **Red Zone** | Exceeds appetite | Escalation to Board, immediate action |
+
+---
+
+## B. Risk Matrix Visualization
 
 ### Inherent Risk Matrix (Before Controls)
 
@@ -132,36 +166,30 @@ LIKELIHOOD ↑
                                       IMPACT →
 ```
 
-**Risk Movement Analysis:**
-- ✅ **Significant Improvement**: R-001 (25→9), R-004 (20→4) - Controls very effective
-- ⚠️ **Moderate Improvement**: R-002 (15→9), R-005 (16→12) - Additional controls needed
-- ❌ **Limited Improvement**: R-003 (20→16) - Current controls insufficient
-- 📊 **Monitoring**: R-006, R-008, R-010 - Stable, continue current approach
+---
+
+## C. Top 10 Risks (Ranked by Residual Score)
+
+| Rank | ID | Title | Category | Inherent | Residual | Owner | Status | Response | SCR Impact |
+|------|----|-------|----------|----------|----------|-------|--------|----------|------------|
+| 1 | R-001 | [Risk title] | OPERATIONAL | 25 | 16 | CRO | In Progress | Treat | £[X]M |
+| 2 | R-002 | [Risk title] | UNDERWRITING | 20 | 12 | Chief Underwriting Officer | In Progress | Treat | £[X]M |
+| 3 | R-003 | [Risk title] | MARKET | 20 | 16 | CIO | Open | Treat | £[X]M |
+| 4 | R-004 | [Risk title] | CREDIT | 16 | 9 | CFO | Monitoring | Transfer | £[X]M |
+| 5 | R-005 | [Risk title] | LIQUIDITY | 15 | 12 | CFO | In Progress | Treat | £[X]M |
+| 6 | R-006 | [Risk title] | OPERATIONAL | 12 | 6 | COO | Monitoring | Tolerate | £[X]M |
+| 7 | R-007 | [Risk title] | STRATEGIC | 15 | 8 | CEO | In Progress | Treat | N/A |
+| 8 | R-008 | [Risk title] | REPUTATIONAL | 9 | 4 | CCO | Closed | Tolerate | N/A |
+| 9 | R-009 | [Risk title] | MARKET | 12 | 8 | CIO | In Progress | Treat | £[X]M |
+| 10 | R-010 | [Risk title] | OPERATIONAL | 6 | 3 | CRO | Monitoring | Tolerate | £[X]M |
 
 ---
 
-## B. Top 10 Risks (Ranked by Residual Score)
-
-| Rank | ID | Title | Category | Inherent | Residual | Owner | Status | Response |
-|------|----|-------|----------|----------|----------|-------|--------|----------|
-| 1 | R-001 | [Risk title] | STRATEGIC | 25 | 16 | CEO | In Progress | Treat |
-| 2 | R-002 | [Risk title] | TECHNOLOGY | 20 | 12 | CTO | In Progress | Treat |
-| 3 | R-003 | [Risk title] | COMPLIANCE | 20 | 16 | CCO | Open | Treat |
-| 4 | R-004 | [Risk title] | FINANCIAL | 16 | 9 | CFO | Monitoring | Transfer |
-| 5 | R-005 | [Risk title] | REPUTATIONAL | 15 | 12 | CEO | In Progress | Treat |
-| 6 | R-006 | [Risk title] | OPERATIONAL | 12 | 6 | COO | Monitoring | Tolerate |
-| 7 | R-007 | [Risk title] | TECHNOLOGY | 15 | 8 | CTO | In Progress | Treat |
-| 8 | R-008 | [Risk title] | OPERATIONAL | 9 | 4 | COO | Closed | Tolerate |
-| 9 | R-009 | [Risk title] | FINANCIAL | 12 | 8 | CFO | In Progress | Treat |
-| 10 | R-010 | [Risk title] | STRATEGIC | 6 | 3 | CEO | Monitoring | Tolerate |
-
----
-
-## C. Detailed Risk Register
+## D. Detailed Risk Register
 
 ### Risk R-001: [Risk Title]
 
-**Category:** STRATEGIC
+**Category:** OPERATIONAL (Solvency 2 Article 258)
 **Status:** In Progress
 **Risk Owner:** [Name, Role] (from Stakeholder RACI: Accountable)
 **Action Owner:** [Name, Role]
@@ -174,25 +202,31 @@ LIKELIHOOD ↑
 **Root Cause:**
 [What underlying issue creates this risk?]
 
+**Risk Drivers:**
+- [Driver 1 - e.g., System complexity]
+- [Driver 2 - e.g., Process immaturity]
+- [Driver 3 - e.g., Resource constraints]
+
 **Trigger Events:**
 - [Event 1 that would cause this risk to materialize]
 - [Event 2 that would cause this risk to materialize]
 - [Event 3 that would cause this risk to materialize]
 
 **Consequences if Realized:**
-[What happens if this risk occurs? Tangible impacts:]
-- [Impact 1: e.g., "£2M budget overrun"]
-- [Impact 2: e.g., "6-month project delay"]
-- [Impact 3: e.g., "Loss of stakeholder confidence"]
+- **Financial Impact:** £[X]M potential loss
+- **SCR Impact:** Increase in operational risk capital by £[X]M
+- **Regulatory Impact:** [Potential supervisory action]
+- **Operational Impact:** [Business disruption description]
+- **Reputational Impact:** [Brand/trust damage]
 
 **Affected Stakeholders:**
 - **[Stakeholder 1]** (from stakeholder-drivers.md): [How they are affected]
 - **[Stakeholder 2]**: [How they are affected]
-- **[Stakeholder 3]**: [How they are affected]
+- **Policyholders**: [Impact on customer service/claims]
 
-**Related Objectives:**
+**Related Business Objectives:**
 - [Stakeholder Goal G-001]: [How this risk threatens the goal]
-- [Stakeholder Goal G-005]: [How this risk threatens the goal]
+- [Strategic objective]: [How this risk threatens the objective]
 
 #### Inherent Risk Assessment (Before Controls)
 
@@ -206,16 +240,22 @@ LIKELIHOOD ↑
 
 #### Current Controls and Mitigations
 
-**Existing Controls:**
+**Preventive Controls:**
 1. **[Control 1]**: [Description of control]
    - Owner: [Name]
    - Effectiveness: Weak | Adequate | **Strong**
-   - Evidence: [How we know this control works]
+   - Testing: [Last tested date, result]
 
 2. **[Control 2]**: [Description of control]
    - Owner: [Name]
    - Effectiveness: Weak | **Adequate** | Strong
-   - Evidence: [How we know this control works]
+   - Testing: [Last tested date, result]
+
+**Detective Controls:**
+1. **[Control 3]**: [Description - e.g., monitoring, reporting]
+   - Owner: [Name]
+   - Effectiveness: [Rating]
+   - Frequency: [How often monitored]
 
 **Overall Control Effectiveness:** Adequate (reduces risk from 25 to 16)
 
@@ -239,19 +279,35 @@ LIKELIHOOD ↑
 
 **Alternative Responses Considered:**
 - **Tolerate**: Rejected - Risk score too high, exceeds appetite
-- **Transfer**: Considered - Would require £X insurance, cost-prohibitive
-- **Terminate**: Not viable - Activity essential to strategic objectives
+- **Transfer**: Considered - Cyber insurance obtained as secondary response
+- **Terminate**: Not viable - Activity essential to insurance operations
+
+#### Solvency 2 Capital Impact
+
+**SCR Module:** Operational Risk
+**SCR Impact Assessment:**
+
+| Scenario | Probability | Loss Amount | Expected Loss | Capital Required |
+|----------|-------------|-------------|---------------|------------------|
+| Base case | 50% | £[X]M | £[Y]M | £[Z]M |
+| Stress case | 10% | £[X]M | £[Y]M | £[Z]M |
+| Extreme case | 1% | £[X]M | £[Y]M | £[Z]M |
+
+**Alignment with ORSA:**
+- This risk is included in ORSA scenario analysis
+- Forward-looking assessment conducted
+- Capital buffer adequate: [Yes/No]
 
 #### Risk Appetite Assessment
 
-**Organizational Risk Appetite for STRATEGIC risks:** Medium (Score ≤ 12)
+**Organizational Risk Appetite for OPERATIONAL risks:** Low (Score ≤ 8)
 **Current Residual Risk Score:** 16 (High)
-**Assessment:** ❌ **Exceeds Appetite** by 4 points (33% over threshold)
+**Assessment:** ❌ **Exceeds Appetite** by 8 points (100% over threshold)
 
 **Justification:**
-[Why proceeding despite exceeding appetite - e.g., "Strategic imperative from CEO driver D-001, Board approval obtained 2025-10-15"]
+[Why proceeding despite exceeding appetite - e.g., "Strategic imperative, Board approval obtained, additional mitigations planned"]
 
-**Escalation Required:** Yes - Board approval required for risks exceeding strategic appetite
+**Escalation Required:** Yes - Board Risk Committee approval required
 
 #### Action Plan
 
@@ -262,7 +318,7 @@ LIKELIHOOD ↑
    - Owner: [Name, Role]
    - Due Date: [Date]
    - Cost: £[X]
-   - Expected Impact: Reduce likelihood from 4 to 3
+   - Expected Impact: Reduce likelihood from 4 to 2
 
 2. **[Mitigation Action 2]**
    - Description: [Detailed action]
@@ -272,317 +328,378 @@ LIKELIHOOD ↑
    - Expected Impact: Reduce impact from 4 to 3
 
 **Target Residual Risk After Mitigations:**
-- Target Likelihood: 3 (Possible)
+- Target Likelihood: 2 (Unlikely)
 - Target Impact: 3 (Moderate)
-- Target Score: 9 (Medium) ✅ Within appetite (≤ 12)
+- Target Score: 6 (Medium) ✅ Within appetite (≤ 8)
 
-**Success Criteria:**
-- [Criterion 1: How we'll know mitigations are working]
-- [Criterion 2: Measurable indicator]
+**Key Risk Indicators (KRIs):**
+| KRI | Threshold | Current | Status |
+|-----|-----------|---------|--------|
+| [KRI 1] | [Limit] | [Value] | [🟢/🟡/🔴] |
+| [KRI 2] | [Limit] | [Value] | [🟢/🟡/🔴] |
 
 **Monitoring Plan:**
-- **Frequency:** Weekly review in Steering Committee
-- **Key Indicators:**
-  - [KPI 1 to monitor]
-  - [KPI 2 to monitor]
+- **Frequency:** Monthly review in Risk Committee
 - **Escalation Triggers:**
   - Score increases by 3+ points
+  - KRI breaches threshold
   - Mitigation actions delayed > 2 weeks
 
 ---
 
-### Risk R-002: [Risk Title]
+### Risk R-002: [Underwriting Risk Title]
 
-**Category:** TECHNOLOGY
+**Category:** UNDERWRITING (Solvency 2 Article 105)
 **Status:** Open
-**Risk Owner:** [Name, Role]
+**Risk Owner:** Chief Underwriting Officer
 **Action Owner:** [Name, Role]
 
-[Repeat full structure as above for each risk]
+#### Risk Description
+[Description of underwriting risk - e.g., adverse claims experience, pricing inadequacy]
+
+#### Solvency 2 Underwriting Risk Sub-Categories
+
+| Sub-Category | Applicable | Assessment |
+|--------------|------------|------------|
+| Premium Risk | [Yes/No] | [Assessment] |
+| Reserve Risk | [Yes/No] | [Assessment] |
+| Catastrophe Risk | [Yes/No] | [Assessment] |
+| Lapse Risk | [Yes/No] | [Assessment] |
+
+[Continue with full risk template structure as above]
 
 ---
 
-## D. Risk Category Analysis
+## E. Risk Category Analysis
 
-### STRATEGIC Risks
+### UNDERWRITING Risks (Solvency 2 Article 105)
 
-**Total STRATEGIC Risks:** [X]
+**Definition:** Risk of loss arising from inadequate pricing, underwriting decisions, or adverse claims experience.
+
+**Total UNDERWRITING Risks:** [X]
 **Average Inherent Score:** 14.2 (High)
 **Average Residual Score:** 9.8 (Medium)
 **Control Effectiveness:** 31% reduction
 
+**SCR Module Impact:** £[X]M
+
+**Sub-Categories:**
+- **Premium Risk:** Risk from fluctuation in timing, frequency, and severity of insured events
+- **Reserve Risk:** Risk from fluctuation in timing and amount of claims settlements
+- **Catastrophe Risk:** Risk of extreme or exceptional events (nat cat, man-made)
+- **Lapse Risk:** Risk from changes in lapse rates
+
 **Risk List:**
-- R-001: [Title] - Residual: 16 (High)
-- R-005: [Title] - Residual: 12 (Medium)
-- R-010: [Title] - Residual: 3 (Low)
+- R-002: [Title] - Residual: 12 (Medium)
+- R-011: [Title] - Residual: 8 (Medium)
 
-**Key Themes:**
-- [Theme 1: e.g., "Strategic direction uncertainty from policy changes"]
-- [Theme 2: e.g., "Stakeholder alignment challenges"]
+**Key Controls:**
+- Underwriting guidelines and authority limits
+- Pricing adequacy reviews
+- Reserving methodology and actuarial sign-off
+- Reinsurance program
+- Claims management process
 
-**Category Risk Profile:** ⚠️ Concerning - 2 risks exceed appetite, additional controls needed
+**Category Risk Profile:** ⚠️ Concerning - Monitor claims development closely
 
 ---
 
-### OPERATIONAL Risks
+### MARKET Risks (Solvency 2 Article 105)
 
-**Total OPERATIONAL Risks:** [X]
-**Average Inherent Score:** 10.5 (Medium)
-**Average Residual Score:** 6.2 (Medium)
-**Control Effectiveness:** 41% reduction
+**Definition:** Risk of loss from movements in market prices of assets, liabilities, and financial instruments.
+
+**Total MARKET Risks:** [X]
+**Average Inherent Score:** 12.5 (High)
+**Average Residual Score:** 8.0 (Medium)
+**Control Effectiveness:** 36% reduction
+
+**SCR Module Impact:** £[X]M
+
+**Sub-Categories:**
+- **Interest Rate Risk:** Sensitivity to changes in interest rates
+- **Equity Risk:** Sensitivity to equity market movements
+- **Property Risk:** Sensitivity to property values
+- **Currency Risk:** Sensitivity to exchange rate movements
+- **Spread Risk:** Sensitivity to credit spreads
+- **Concentration Risk:** Exposure concentrations
 
 **Risk List:**
-- R-006: [Title] - Residual: 6 (Medium)
-- R-008: [Title] - Residual: 4 (Low)
+- R-003: [Title] - Residual: 10 (Medium)
+- R-009: [Title] - Residual: 8 (Medium)
 
-**Key Themes:**
-- [Theme 1: e.g., "Resource availability and skills gaps"]
-- [Theme 2: e.g., "Process maturity issues"]
+**Key Controls:**
+- Investment policy and limits
+- Asset-liability matching
+- Duration management
+- Currency hedging
+- Diversification requirements
+- Stress testing program
 
-**Category Risk Profile:** ✅ Acceptable - All risks within appetite, good control effectiveness
+**Category Risk Profile:** ✅ Acceptable - Within investment policy limits
 
 ---
 
-### FINANCIAL Risks
+### CREDIT Risks (Solvency 2 Article 105)
 
-**Total FINANCIAL Risks:** [X]
-**Average Inherent Score:** 12.0 (Medium)
-**Average Residual Score:** 8.5 (Medium)
-**Control Effectiveness:** 29% reduction
+**Definition:** Risk of loss from counterparty default or deterioration in credit quality.
+
+**Total CREDIT Risks:** [X]
+**Average Inherent Score:** 11.0 (Medium)
+**Average Residual Score:** 7.5 (Medium)
+**Control Effectiveness:** 32% reduction
+
+**SCR Module Impact:** £[X]M
+
+**Counterparty Categories:**
+- Reinsurers
+- Banks and financial institutions
+- Brokers and intermediaries
+- Policyholders (premium receivables)
+- Investment counterparties
 
 **Risk List:**
 - R-004: [Title] - Residual: 9 (Medium)
-- R-009: [Title] - Residual: 8 (Medium)
+- R-012: [Title] - Residual: 6 (Medium)
 
-**Key Themes:**
-- [Theme 1: e.g., "Cost estimation uncertainty"]
-- [Theme 2: e.g., "Funding dependency on external approval"]
+**Key Controls:**
+- Credit limits by counterparty
+- Credit rating requirements
+- Collateral arrangements
+- Concentration limits
+- Credit monitoring and watchlist
+- Reinsurer security policy
 
-**Category Risk Profile:** ✅ Acceptable - Risks within appetite, monitoring required
+**Category Risk Profile:** ✅ Acceptable - Strong counterparty quality
 
 ---
 
-### COMPLIANCE/REGULATORY Risks
+### OPERATIONAL Risks (Solvency 2 Article 258)
 
-**Total COMPLIANCE Risks:** [X]
-**Average Inherent Score:** 16.0 (High)
-**Average Residual Score:** 11.3 (Medium)
-**Control Effectiveness:** 29% reduction
+**Definition:** Risk of loss from inadequate or failed internal processes, people, systems, or external events.
+
+**Total OPERATIONAL Risks:** [X]
+**Average Inherent Score:** 15.0 (High)
+**Average Residual Score:** 10.0 (Medium)
+**Control Effectiveness:** 33% reduction
+
+**SCR Module Impact:** £[X]M
+
+**Sub-Categories:**
+- **Process Risk:** Internal process failures
+- **People Risk:** Human error, fraud, key person dependency
+- **Systems Risk:** IT failures, cyber attacks, data breaches
+- **External Events:** Natural disasters, supplier failures, regulatory changes
+- **Legal Risk:** Litigation, contract disputes
+- **Compliance Risk:** Regulatory breaches, sanctions
 
 **Risk List:**
-- R-003: [Title] - Residual: 16 (High)
+- R-001: [Title] - Residual: 16 (High) ⚠️ Exceeds appetite
+- R-006: [Title] - Residual: 6 (Medium)
+- R-010: [Title] - Residual: 3 (Low)
 
-**Key Themes:**
-- [Theme 1: e.g., "GDPR/DPA 2018 compliance complexity"]
-- [Theme 2: e.g., "Regulatory change during project"]
+**Key Controls:**
+- Business continuity planning
+- IT disaster recovery
+- Cyber security program (SOC2/ISO 27001)
+- Internal controls framework
+- Compliance monitoring
+- Fraud prevention
+- Vendor management
 
-**Category Risk Profile:** ⚠️ Concerning - Compliance risks harder to mitigate, legal review needed
+**Category Risk Profile:** ⚠️ Concerning - R-001 exceeds appetite, mitigation underway
+
+---
+
+### LIQUIDITY Risks (Solvency 2 Article 260)
+
+**Definition:** Risk that the insurer cannot meet its obligations as they fall due without incurring unacceptable losses.
+
+**Total LIQUIDITY Risks:** [X]
+**Average Inherent Score:** 12.0 (Medium)
+**Average Residual Score:** 8.0 (Medium)
+**Control Effectiveness:** 33% reduction
+
+**Not included in SCR but monitored separately**
+
+**Liquidity Metrics:**
+| Metric | Limit | Current | Status |
+|--------|-------|---------|--------|
+| Liquidity Coverage Ratio | >150% | [X]% | [🟢/🟡/🔴] |
+| Cash and equivalents | >£[X]M | £[Y]M | [🟢/🟡/🔴] |
+| Liquid assets / liabilities | >[X]% | [Y]% | [🟢/🟡/🔴] |
+
+**Risk List:**
+- R-005: [Title] - Residual: 12 (Medium)
+
+**Key Controls:**
+- Liquidity policy and limits
+- Cash flow forecasting
+- Liquidity buffer requirements
+- Asset liability management
+- Contingency funding plan
+- Stress testing (liquidity)
+
+**Category Risk Profile:** ✅ Acceptable - Strong liquidity position
+
+---
+
+### STRATEGIC Risks
+
+**Definition:** Risk from business decisions, changes in business environment, or failure to adapt to industry changes.
+
+**Total STRATEGIC Risks:** [X]
+**Average Inherent Score:** 13.5 (High)
+**Average Residual Score:** 9.0 (Medium)
+**Control Effectiveness:** 33% reduction
+
+**Not included in SCR (Pillar 1) but considered in ORSA (Pillar 2)**
+
+**Strategic Risk Themes:**
+- Market and competitive position
+- Business model sustainability
+- Digital transformation
+- Regulatory change
+- Climate change and ESG
+- Talent and capability
+
+**Risk List:**
+- R-007: [Title] - Residual: 8 (Medium)
+
+**Key Controls:**
+- Strategic planning process
+- Market and competitor analysis
+- Scenario planning
+- Board strategy reviews
+- Performance monitoring
+
+**Category Risk Profile:** ✅ Acceptable - Aligned with strategic plan
 
 ---
 
 ### REPUTATIONAL Risks
 
+**Definition:** Risk of damage to brand, trust, or stakeholder relationships affecting business value.
+
 **Total REPUTATIONAL Risks:** [X]
-**Average Inherent Score:** 13.5 (High)
-**Average Residual Score:** 10.0 (Medium)
-**Control Effectiveness:** 26% reduction
+**Average Inherent Score:** 11.0 (Medium)
+**Average Residual Score:** 6.5 (Medium)
+**Control Effectiveness:** 41% reduction
+
+**Not included in SCR but significant business impact**
+
+**Reputation Risk Sources:**
+- Customer complaints and service failures
+- Product mis-selling or conduct issues
+- Data breaches and privacy failures
+- Social media and press coverage
+- Environmental, Social, Governance (ESG) issues
+- Executive misconduct
 
 **Risk List:**
-- R-005: [Title] - Residual: 12 (Medium)
+- R-008: [Title] - Residual: 4 (Low)
 
-**Key Themes:**
-- [Theme 1: e.g., "Public/media scrutiny of government IT projects"]
-- [Theme 2: e.g., "Service failure visibility"]
+**Key Controls:**
+- Conduct risk framework
+- Customer complaints handling
+- Media monitoring and response
+- Crisis management plan
+- ESG policy and reporting
+- Brand protection
 
-**Category Risk Profile:** ⚠️ Concerning - Reputational risks difficult to recover from, prevention critical
-
----
-
-### TECHNOLOGY Risks
-
-**Total TECHNOLOGY Risks:** [X]
-**Average Inherent Score:** 15.0 (High)
-**Average Residual Score:** 9.3 (Medium)
-**Control Effectiveness:** 38% reduction
-
-**Risk List:**
-- R-002: [Title] - Residual: 12 (Medium)
-- R-007: [Title] - Residual: 8 (Medium)
-
-**Key Themes:**
-- [Theme 1: e.g., "Legacy system integration challenges"]
-- [Theme 2: e.g., "Technology maturity and scaling"]
-
-**Category Risk Profile:** ✅ Acceptable - Good control effectiveness, CTO actively managing
+**Category Risk Profile:** ✅ Acceptable - Strong brand management
 
 ---
 
-## E. Risk Ownership Matrix
+## F. Risk Ownership Matrix
 
-**Risk Ownership Distribution by Stakeholder:**
+**Risk Ownership Distribution by Solvency 2 Key Function:**
 
-| Stakeholder | Role | Owned Risks | Critical | High | Medium | Low | Total Score | Risk Concentration |
-|-------------|------|-------------|----------|------|--------|-----|-------------|-------------------|
-| CEO | Strategic Lead | R-001, R-005, R-010 | 0 | 2 | 1 | 0 | 31 | ⚠️ High concentration |
-| CTO | Technology Lead | R-002, R-007 | 0 | 1 | 1 | 0 | 20 | Moderate |
-| CFO | Financial Lead | R-004, R-009 | 0 | 0 | 2 | 0 | 17 | Moderate |
-| CCO | Compliance Lead | R-003 | 0 | 1 | 0 | 0 | 16 | Focused |
-| COO | Operations Lead | R-006, R-008 | 0 | 0 | 1 | 1 | 10 | Low |
+| Role | Solvency 2 Function | Owned Risks | Critical | High | Medium | Low | Total Score |
+|------|---------------------|-------------|----------|------|--------|-----|-------------|
+| CRO | Risk Management | R-001, R-006, R-010 | 0 | 1 | 2 | 0 | 25 |
+| Chief Underwriting Officer | N/A | R-002, R-011 | 0 | 1 | 1 | 0 | 20 |
+| CFO | N/A | R-004, R-005 | 0 | 1 | 1 | 0 | 21 |
+| CIO | N/A | R-003, R-009 | 0 | 1 | 1 | 0 | 18 |
+| Chief Actuary | Actuarial Function | [Risks] | 0 | 0 | 0 | 0 | 0 |
+| Compliance Officer | Compliance Function | [Risks] | 0 | 0 | 0 | 0 | 0 |
+| Internal Audit | Internal Audit Function | N/A (3rd line) | N/A | N/A | N/A | N/A | N/A |
 
-**Risk Concentration Analysis:**
-- ⚠️ **CEO owns 3 risks totaling 31 points** - Consider delegating some risks
-- **CTO concentration on technology risks** - Expected and appropriate
-- **Good distribution across financial and operational risks**
-
-**Escalation Paths:**
-- **Critical/High Strategic Risks** → CEO → Board
-- **Critical/High Technology Risks** → CTO → Steering Committee
-- **All Compliance Risks** → CCO → Audit Committee
+**Solvency 2 Key Functions Engagement:**
+- ✅ Risk Function: Reviews all risks, owns operational risks
+- ✅ Actuarial Function: Reviews underwriting and reserving risks
+- ✅ Compliance Function: Reviews regulatory and conduct risks
+- ✅ Internal Audit: Independent assurance on risk management
 
 ---
 
-## F. 4Ts Response Framework Summary
+## G. Solvency 2 Integration
+
+### ORSA Alignment
+
+**How this Risk Register feeds into Own Risk and Solvency Assessment (ORSA):**
+
+| ORSA Component | Risk Register Input |
+|----------------|---------------------|
+| Risk profile assessment | All risks with Solvency 2 categories |
+| Capital needs assessment | SCR impact by risk |
+| Continuous compliance | Risks affecting solvency position |
+| Forward-looking view | Strategic and emerging risks |
+| Stress and scenario testing | Risk scenarios and impacts |
+
+### Pillar 2 Governance Requirements
+
+**Solvency 2 Article 44 - Risk Management:**
+- ✅ Risk management system covers all material risks
+- ✅ Risks identified, measured, monitored, managed, reported
+- ✅ Risk management integrated into decision-making
+
+**Solvency 2 Article 45 - ORSA:**
+- ✅ Regular assessment of overall solvency needs
+- ✅ Continuous compliance with capital requirements
+- ✅ Deviation from assumptions underlying SCR
+
+### Regulatory Reporting
+
+**Risks feeding into regulatory reports:**
+
+| Report | Risks Included | Frequency |
+|--------|---------------|-----------|
+| RSR (Regular Supervisory Report) | All material risks | Annual |
+| SFCR (Solvency and Financial Condition Report) | Risk profile summary | Annual |
+| QRTs (Quantitative Reporting Templates) | SCR risks | Quarterly/Annual |
+| ORSA Report | All risks + forward view | Annual / Trigger |
+
+---
+
+## H. 4Ts Response Framework Summary
 
 **Risk Response Distribution:**
 
 | Response | Count | % | Total Risk Score | Key Examples |
 |----------|-------|---|------------------|--------------|
-| **TOLERATE** | 2 | 20% | 7 (Low) | R-008, R-010 - Low risks within appetite |
-| **TREAT** | 6 | 60% | 68 (High) | R-001, R-002, R-003, R-005, R-007, R-009 - Active mitigation |
-| **TRANSFER** | 1 | 10% | 9 (Medium) | R-004 - Cyber insurance obtained |
-| **TERMINATE** | 1 | 10% | 6 (Medium) | R-006 - High-risk vendor option cancelled |
-| **TOTAL** | 10 | 100% | 90 | |
-
-**Response Breakdown by Category:**
-
-| Category | Tolerate | Treat | Transfer | Terminate | Predominant Response |
-|----------|----------|-------|----------|-----------|---------------------|
-| STRATEGIC | 1 | 2 | 0 | 0 | Treat (67%) |
-| OPERATIONAL | 1 | 0 | 0 | 1 | Mixed |
-| FINANCIAL | 0 | 1 | 1 | 0 | Mixed |
-| COMPLIANCE | 0 | 1 | 0 | 0 | Treat (100%) |
-| REPUTATIONAL | 0 | 1 | 0 | 0 | Treat (100%) |
-| TECHNOLOGY | 0 | 2 | 0 | 0 | Treat (100%) |
-
-**Key Insights:**
-- **60% of risks require active treatment** - Significant mitigation effort needed
-- **Only 20% can be tolerated** - Indicates challenging risk environment
-- **Limited transfer opportunities** - Most risks internal to project
-- **1 termination** - Demonstrates willingness to stop risky activities
+| **TOLERATE** | 3 | 30% | 13 (Low) | R-006, R-008, R-010 - Within appetite |
+| **TREAT** | 5 | 50% | 64 (High) | R-001, R-002, R-003, R-005, R-007 - Active mitigation |
+| **TRANSFER** | 1 | 10% | 9 (Medium) | R-004 - Reinsurance/insurance obtained |
+| **TERMINATE** | 1 | 10% | 8 (Medium) | R-011 - High-risk product withdrawn |
+| **TOTAL** | 10 | 100% | 94 | |
 
 ---
 
-## G. Risk Appetite Compliance
-
-**Organizational Risk Appetite Thresholds:**
-
-| Category | Appetite Level | Threshold Score | Description |
-|----------|---------------|-----------------|-------------|
-| STRATEGIC | Medium | ≤ 12 | Willing to accept medium strategic risks for growth |
-| OPERATIONAL | Low | ≤ 6 | Low tolerance for operational disruption |
-| FINANCIAL | Medium | ≤ 9 | Moderate financial risk for appropriate return |
-| COMPLIANCE | Very Low | ≤ 4 | Minimal tolerance for compliance breaches |
-| REPUTATIONAL | Low | ≤ 6 | Low tolerance for reputational damage |
-| TECHNOLOGY | Medium | ≤ 12 | Willing to adopt new technology with controls |
-
-**Compliance Summary:**
-
-| Category | Appetite | Risks Within | Risks Exceeding | Avg Excess | Action Required |
-|----------|----------|--------------|-----------------|------------|-----------------|
-| STRATEGIC | ≤ 12 | 1 (33%) | 2 (67%) | +5.5 points | ⚠️ Board approval required |
-| OPERATIONAL | ≤ 6 | 2 (100%) | 0 (0%) | N/A | ✅ Compliant |
-| FINANCIAL | ≤ 9 | 2 (100%) | 0 (0%) | N/A | ✅ Compliant |
-| COMPLIANCE | ≤ 4 | 0 (0%) | 1 (100%) | +12 points | ❌ Urgent action required |
-| REPUTATIONAL | ≤ 6 | 0 (0%) | 1 (100%) | +6 points | ⚠️ CEO approval required |
-| TECHNOLOGY | ≤ 12 | 2 (100%) | 0 (0%) | N/A | ✅ Compliant |
-
-**Overall Appetite Compliance:** ⚠️ 60% of risk categories exceed appetite
-
-**Risks Significantly Exceeding Appetite (>50% over threshold):**
-
-| Risk ID | Category | Appetite | Actual | Excess | % Over | Escalation |
-|---------|----------|----------|--------|--------|--------|------------|
-| R-003 | COMPLIANCE | 4 | 16 | +12 | 300% | ❌ Audit Committee escalation required |
-| R-005 | REPUTATIONAL | 6 | 12 | +6 | 100% | ⚠️ CEO approval obtained 2025-10-15 |
-| R-001 | STRATEGIC | 12 | 16 | +4 | 33% | ⚠️ Board approval pending |
-
-**Recommendations:**
-1. **URGENT**: Escalate R-003 (COMPLIANCE) to Audit Committee - 300% over appetite
-2. **HIGH PRIORITY**: Obtain Board approval for R-001 (STRATEGIC) - pending approval
-3. **MONITOR**: R-005 (REPUTATIONAL) - CEO approval obtained, monitor closely
-
----
-
-## H. Prioritized Action Plan
-
-**Priority Actions for Risk Mitigation:**
+## I. Prioritized Action Plan
 
 ### Priority 1: URGENT (Critical Risks or Significant Appetite Exceedance)
 
 | Priority | Action | Risk(s) Addressed | Owner | Due Date | Cost | Expected Impact | Status |
 |----------|--------|-------------------|-------|----------|------|-----------------|--------|
-| 1 | [Action 1] | R-003 (COMPLIANCE) | CCO | 2025-11-01 | £50K | Reduce from 16 to 8 | Not Started |
-| 2 | [Action 2] | R-001 (STRATEGIC) | CEO | 2025-11-15 | £20K | Reduce from 16 to 9 | In Progress |
-
-**Total Urgent Actions:** 2
-**Total Cost:** £70K
-**Expected Risk Reduction:** 15 points total
+| 1 | [Action 1] | R-001 (OPERATIONAL) | CRO | [Date] | £[X]K | Reduce from 16 to 8 | In Progress |
+| 2 | [Action 2] | R-003 (MARKET) | CIO | [Date] | £[X]K | Reduce from 16 to 10 | Not Started |
 
 ### Priority 2: HIGH (High Risks Within Appetite)
 
 | Priority | Action | Risk(s) Addressed | Owner | Due Date | Cost | Expected Impact | Status |
 |----------|--------|-------------------|-------|----------|------|-----------------|--------|
-| 3 | [Action 3] | R-002 (TECHNOLOGY) | CTO | 2025-12-01 | £30K | Reduce from 12 to 6 | Not Started |
-| 4 | [Action 4] | R-005 (REPUTATIONAL) | CEO | 2025-12-15 | £15K | Reduce from 12 to 8 | Planning |
-
-**Total High Priority Actions:** 2
-**Total Cost:** £45K
-**Expected Risk Reduction:** 10 points total
-
-### Priority 3: MEDIUM (Medium Risks Requiring Treatment)
-
-| Priority | Action | Risk(s) Addressed | Owner | Due Date | Cost | Expected Impact | Status |
-|----------|--------|-------------------|-------|----------|------|-----------------|--------|
-| 5 | [Action 5] | R-007 (TECHNOLOGY) | CTO | 2026-01-15 | £10K | Reduce from 8 to 4 | Not Started |
-| 6 | [Action 6] | R-009 (FINANCIAL) | CFO | 2026-02-01 | £5K | Reduce from 8 to 6 | Not Started |
-
-**Total Medium Priority Actions:** 2
-**Total Cost:** £15K
-**Expected Risk Reduction:** 6 points total
-
-**Overall Action Plan Summary:**
-- **Total Actions:** 6
-- **Total Investment:** £130K
-- **Expected Risk Reduction:** 31 points (34% reduction)
-- **Target Completion:** 2026-02-01
-
----
-
-## I. Integration with SOBC
-
-**How this Risk Register feeds into Strategic Outline Business Case (SOBC):**
-
-### SOBC Strategic Case (Part A)
-- **"Why Now?" section** uses strategic risks to demonstrate urgency
-- **R-001** (STRATEGIC, 16): Demonstrates need for immediate action to address [strategic driver]
-
-### SOBC Economic Case (Part B)
-- **Risk-adjusted costs** use financial risks + HM Treasury optimism bias
-- **R-004** (FINANCIAL, 9): £2M budget risk → Add 15% contingency (£300K)
-- **R-009** (FINANCIAL, 8): Cost escalation risk → Add 10% contingency (£200K)
-- **Total risk contingency:** £500K added to Economic Case costs
-
-### SOBC Management Case (Part E - Risk Management)
-- **Full risk register** included in Management Case Part E
-- **Top 10 risks** highlighted with mitigation plans
-- **Risk ownership matrix** demonstrates clear accountability
-- **Monitoring framework** shows ongoing risk management capability
-
-### SOBC Recommendation
-- **High-risk profile** (60% exceeding appetite) may influence:
-  - Option selection (prefer lower-risk options)
-  - Phasing strategy (de-risk early phases first)
-  - Go/no-go decision (if risk profile unacceptable)
+| 3 | [Action 3] | R-002 (UNDERWRITING) | CUO | [Date] | £[X]K | Reduce from 12 to 8 | Planning |
+| 4 | [Action 4] | R-005 (LIQUIDITY) | CFO | [Date] | £[X]K | Reduce from 12 to 6 | Not Started |
 
 ---
 
@@ -592,115 +709,41 @@ LIKELIHOOD ↑
 
 | Risk Level | Review Frequency | Reviewed By | Escalated To | Report Format |
 |------------|------------------|-------------|--------------|---------------|
-| **Critical (20-25)** | Weekly | Risk Owner + PMO | Steering Committee | Dashboard + narrative |
-| **High (13-19)** | Bi-weekly | Risk Owner | Project Board | Dashboard |
-| **Medium (6-12)** | Monthly | Risk Owner | Project Manager | Exception report |
-| **Low (1-5)** | Quarterly | Action Owner | Risk Owner | Status update |
+| **Critical (20-25)** | Weekly | Risk Owner + CRO | Board Risk Committee | Dashboard + narrative |
+| **High (13-19)** | Monthly | Risk Owner | Risk Committee | Dashboard |
+| **Medium (6-12)** | Quarterly | Risk Owner | CRO | Exception report |
+| **Low (1-5)** | Annually | Action Owner | Risk Owner | Status update |
 
 ### Key Risk Indicators (KRIs)
 
-**Leading Indicators** (predict future risk changes):
-- [KRI 1: e.g., "Team turnover rate > 10% → increases operational risk"]
-- [KRI 2: e.g., "Vendor SLA breaches → increases technology risk"]
-- [KRI 3: e.g., "Budget variance > 5% → increases financial risk"]
+**Leading Indicators:**
+- [KRI 1: e.g., "New business volumes > budget by 20% → increases underwriting risk"]
+- [KRI 2: e.g., "Claims frequency trend increase → indicates reserving risk"]
+- [KRI 3: e.g., "Investment portfolio duration mismatch → indicates market risk"]
 
-**Lagging Indicators** (confirm risk materialization):
-- [KRI 4: e.g., "Defect rate > 5 per release → technology risk realized"]
-- [KRI 5: e.g., "Schedule delay > 2 weeks → operational risk realized"]
-
-### Escalation Criteria
-
-**Automatic Escalation Triggers:**
-1. Any risk increases by 5+ points
-2. Any new Critical risk (score 20-25) identified
-3. Any risk exceeds appetite and no mitigation plan
-4. Any mitigation action delayed > 1 month
-5. 3+ risks in same category exceed appetite
+**Lagging Indicators:**
+- [KRI 4: e.g., "Combined ratio > 100% → underwriting loss realized"]
+- [KRI 5: e.g., "Operational loss > £XM → operational risk realized"]
 
 ### Reporting Requirements
 
-**Weekly** (Critical Risks Only):
-- Dashboard to Steering Committee
-- Narrative update on top 3 critical risks
+**Monthly** (Board Risk Committee):
+- Risk dashboard with heat map
+- Top 10 risks by residual score
+- Risk appetite compliance
+- KRI status
+
+**Quarterly** (Executive Committee):
+- Full risk register review
+- Risk trend analysis
 - Action plan progress
+- Emerging risks assessment
 
-**Monthly** (All Risks):
-- Full risk register to Project Board
-- Risk matrix visualization
-- Risk appetite compliance summary
-- Action plan status
-
-**Quarterly** (Strategic Review):
-- Risk register to Audit Committee (if applicable)
-- Risk trend analysis (improving/deteriorating)
-- Risk appetite threshold review
-- Lessons learned and process improvements
-
-### Risk Register Maintenance
-
-**Risk Register Owner:** [Name, Role]
-
-**Responsibilities:**
-- Maintain accuracy of risk register
-- Coordinate risk reviews with risk owners
-- Update risk scores based on evidence
-- Track mitigation action completion
-- Escalate risks per criteria
-- Produce risk reports
-
-**Update Process:**
-1. Risk owners submit updates weekly (critical/high) or monthly (medium/low)
-2. Risk register owner validates and updates register
-3. PMO reviews for consistency and completeness
-4. Steering Committee approves material changes
-
-**Version Control:**
-- Version increments with each update
-- Change log maintained in Document Control section
-- Previous versions archived for audit trail
-
----
-
-## K. Orange Book Compliance Checklist
-
-This risk register demonstrates compliance with HM Treasury Orange Book (2023):
-
-### Part I - Risk Management Principles
-
-- ✅ **A. Governance and Leadership**
-  - Risk owners assigned from senior stakeholders (from RACI matrix)
-  - Escalation paths defined to Board/Audit Committee
-  - Risk appetite set and monitored
-
-- ✅ **B. Integration**
-  - Risks linked to strategic objectives (stakeholder goals)
-  - Risks inform business case (SOBC Management Case)
-  - Risk management embedded in project governance
-
-- ✅ **C. Collaboration and Best Information**
-  - Risks sourced from stakeholder concerns and expert judgment
-  - Multiple perspectives considered (stakeholder analysis)
-  - Evidence-based assessment (likelihood and impact justified)
-
-- ✅ **D. Risk Management Processes**
-  - Systematic identification across 6 categories
-  - Consistent assessment methodology (5×5 matrix)
-  - 4Ts response framework applied
-  - Inherent and residual risk tracked
-
-- ✅ **E. Continual Improvement**
-  - Regular review schedule (weekly/monthly/quarterly)
-  - Key Risk Indicators defined
-  - Lessons learned process
-  - Risk register version control
-
-### Part II - Risk Control Framework
-
-- ✅ **4-Pillar "House" Structure**
-  - Risk appetite and tolerance defined
-  - Risk ownership and governance established
-  - Risk assessment methodology documented
-  - Control effectiveness measured (inherent vs residual)
+**Annually** (Board and Regulators):
+- ORSA report
+- SFCR risk profile
+- Risk strategy review
+- Risk appetite calibration
 
 ---
 
@@ -710,54 +753,44 @@ This risk register demonstrates compliance with HM Treasury Orange Book (2023):
 
 | Score | Rating | Probability | Description |
 |-------|--------|-------------|-------------|
-| 1 | Rare | < 5% | Highly unlikely, exceptional circumstances only |
-| 2 | Unlikely | 5-25% | Could happen but probably won't, low probability |
-| 3 | Possible | 25-50% | Reasonable chance, has happened before |
-| 4 | Likely | 50-75% | More likely to happen than not, expected |
-| 5 | Almost Certain | > 75% | Expected to occur, highly probable |
+| 1 | Rare | < 2% | Once in 50 years, exceptional circumstances |
+| 2 | Unlikely | 2-10% | Once in 10-50 years, known but not expected |
+| 3 | Possible | 10-25% | Once in 4-10 years, has happened before |
+| 4 | Likely | 25-50% | Once in 2-4 years, expected to occur |
+| 5 | Almost Certain | > 50% | Once a year or more, will happen |
 
-### Impact Scale (1-5)
+### Impact Scale (1-5) - Insurance Context
 
-| Score | Rating | Financial Impact | Schedule Impact | Stakeholder Impact | Description |
+| Score | Rating | Financial Impact | Solvency Impact | Regulatory Impact | Description |
 |-------|--------|------------------|-----------------|-------------------|-------------|
-| 1 | Negligible | < £50K | < 1 week | Minimal concern | Easily absorbed, routine management |
-| 2 | Minor | £50K-£200K | 1-4 weeks | Minor concern | Manageable within contingency |
-| 3 | Moderate | £200K-£500K | 1-2 months | Significant concern | Requires management effort and approval |
-| 4 | Major | £500K-£2M | 2-6 months | Severe concern | Threatens key objectives, difficult recovery |
-| 5 | Catastrophic | > £2M | > 6 months | Existential threat | Project failure, major stakeholder impact |
+| 1 | Negligible | < £1M | < 5pp SCR | No regulatory interest | Minor, easily absorbed |
+| 2 | Minor | £1-5M | 5-10pp SCR | Informal supervisory query | Manageable within tolerances |
+| 3 | Moderate | £5-20M | 10-20pp SCR | Formal supervisory letter | Management attention required |
+| 4 | Major | £20-50M | 20-40pp SCR | Supervisory action plan | Threatens objectives |
+| 5 | Catastrophic | > £50M | > 40pp SCR | Intervention/enforcement | Threatens viability |
 
-### Risk Score Matrix (Likelihood × Impact)
+### Risk Score Matrix
 
 | Score Range | Risk Level | Color | Action Required |
 |-------------|------------|-------|-----------------|
-| 20-25 | Critical | 🟥 Red | Immediate escalation, senior management action |
-| 13-19 | High | 🟧 Orange | Management attention, mitigation plan required |
-| 6-12 | Medium | 🟨 Yellow | Management monitoring, consider mitigation |
-| 1-5 | Low | 🟩 Green | Routine monitoring, accept or apply low-cost controls |
+| 20-25 | Critical | 🟥 Red | Immediate Board escalation |
+| 13-19 | High | 🟧 Orange | Risk Committee attention |
+| 6-12 | Medium | 🟨 Yellow | Management monitoring |
+| 1-5 | Low | 🟩 Green | Routine monitoring |
 
 ---
 
-## Appendix B: Stakeholder-Risk Linkage
+## Appendix B: Solvency 2 Risk Categories Reference
 
-**Traceability from Stakeholders to Risks:**
-
-| Stakeholder | Driver (from stakeholder-drivers.md) | Risk ID | Risk Title | Category | Score |
-|-------------|-------------------------------------|---------|------------|----------|-------|
-| CFO | D-001: Reduce costs (FINANCIAL, HIGH) | R-004 | Cloud costs exceed budget 40% | FINANCIAL | 9 |
-| CFO | D-001: Reduce costs | R-009 | ROI not achieved due to low adoption | FINANCIAL | 8 |
-| CTO | D-002: Modernize architecture (STRATEGIC, HIGH) | R-001 | Strategic direction changes mid-project | STRATEGIC | 16 |
-| CTO | D-002: Modernize architecture | R-002 | Legacy integration fails at scale | TECHNOLOGY | 12 |
-| CCO | D-003: Ensure compliance (COMPLIANCE, CRITICAL) | R-003 | GDPR non-compliance in data transfer | COMPLIANCE | 16 |
-| Operations | D-004: Minimize downtime (OPERATIONAL, HIGH) | R-006 | Service outage during cutover | OPERATIONAL | 6 |
-| CEO | D-005: Protect reputation (REPUTATIONAL, HIGH) | R-005 | Public service failure damages trust | REPUTATIONAL | 12 |
-
-**Stakeholder Concerns Mapped to Risks:**
-
-| Stakeholder Conflict (from stakeholder-drivers.md) | Risk(s) Created | Mitigation |
-|---------------------------------------------------|-----------------|------------|
-| CFO vs CTO: Cost reduction vs innovation | R-004, R-009 | Phased approach, prove ROI early |
-| Operations vs CTO: Stability vs modernization | R-002, R-006 | Blue-green deployment, rollback plan |
-| Compliance vs Speed: Rigor vs agility | R-003 | Early legal review, compliance gates |
+| Category | Solvency 2 Article | SCR Module | Description |
+|----------|-------------------|------------|-------------|
+| Underwriting | Article 105 | Underwriting risk | Premium, reserve, catastrophe, lapse |
+| Market | Article 105 | Market risk | Interest rate, equity, property, currency, spread |
+| Credit | Article 105 | Counterparty default | Reinsurance, derivatives, receivables |
+| Operational | Article 258 | Operational risk | Process, people, systems, external |
+| Liquidity | Article 260 | N/A (monitoring) | Cash flow, funding, asset liquidity |
+| Strategic | N/A | N/A (ORSA) | Business model, competition, environment |
+| Reputational | N/A | N/A (ORSA) | Brand, trust, stakeholder relationships |
 
 ---
 
@@ -765,42 +798,30 @@ This risk register demonstrates compliance with HM Treasury Orange Book (2023):
 
 | Role | Name | Signature | Date |
 |------|------|-----------|------|
-| **Risk Register Owner** | [Name] | | |
-| **Project Manager** | [Name] | | |
-| **Senior Responsible Owner** | [Name] | | |
-| **Steering Committee Chair** | [Name] | | |
+| **Chief Risk Officer** | [Name] | | |
+| **Chief Actuary** | [Name] | | |
+| **Chief Financial Officer** | [Name] | | |
+| **Board Risk Committee Chair** | [Name] | | |
 
 ---
 
 ## Next Steps
 
 1. **Immediate Actions** (This Week):
-   - [ ] Escalate R-003 (COMPLIANCE, Critical) to Audit Committee
-   - [ ] Obtain Board approval for R-001 (STRATEGIC exceeds appetite)
-   - [ ] Schedule risk review meetings with all risk owners
-   - [ ] Initiate priority 1 mitigations (R-001, R-003)
+   - [ ] Escalate R-001 (OPERATIONAL) to Board Risk Committee
+   - [ ] Initiate priority 1 mitigations
+   - [ ] Update KRI dashboards
 
 2. **Short-term Actions** (This Month):
-   - [ ] Integrate risk register into SOBC Management Case Part E
-   - [ ] Set up weekly risk dashboard for Steering Committee
-   - [ ] Implement Key Risk Indicators (KRIs) monitoring
-   - [ ] Complete all priority 1 and 2 mitigation actions
+   - [ ] Integrate risk register updates into ORSA
+   - [ ] Complete quarterly risk review
+   - [ ] Update SCR impact analysis
 
 3. **Medium-term Actions** (This Quarter):
-   - [ ] Quarterly risk appetite compliance review
-   - [ ] Lessons learned from risk materialization (if any)
-   - [ ] Risk register process improvement review
-   - [ ] Train new risk owners on Orange Book methodology
+   - [ ] Risk appetite recalibration review
+   - [ ] Emerging risks horizon scan
+   - [ ] Internal audit of risk management
 
----
-
-**END OF RISK REGISTER**
-
----
-
-*This risk register follows HM Treasury Orange Book (2023) principles and integrates with ArcKit's stakeholder-driven architecture governance framework.*
-
-*For questions or updates, contact: [Risk Register Owner Name and Email]*
 ---
 
 **Generated by**: ArcKit `/arckit.risk` command
@@ -808,4 +829,3 @@ This risk register demonstrates compliance with HM Treasury Orange Book (2023):
 **ArcKit Version**: [VERSION]
 **Project**: [PROJECT_NAME]
 **Model**: [AI_MODEL]
-

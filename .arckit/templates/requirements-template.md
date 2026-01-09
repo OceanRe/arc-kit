@@ -7,7 +7,7 @@
 | **Document ID** | ARC-[PROJECT_ID]-REQ-v[VERSION] |
 | **Document Type** | [DOCUMENT_TYPE_NAME] |
 | **Project** | [PROJECT_NAME] (Project [PROJECT_ID]) |
-| **Classification** | [PUBLIC / OFFICIAL / OFFICIAL-SENSITIVE / SECRET] |
+| **Classification** | [PUBLIC / INTERNAL / CONFIDENTIAL / RESTRICTED] |
 | **Status** | [DRAFT / IN_REVIEW / APPROVED / PUBLISHED / SUPERSEDED / ARCHIVED] |
 | **Version** | [VERSION] |
 | **Created Date** | [YYYY-MM-DD] |
@@ -375,7 +375,7 @@
 
 #### NFR-C-1: Data Privacy Compliance
 
-**Applicable Regulations**: [GDPR | CCPA | HIPAA | PCI-DSS | SOX | FedRAMP]
+**Applicable Regulations**: [GDPR | CCPA | HIPAA | PCI-DSS | SOX]
 
 **Compliance Requirements**:
 - [ ] Data subject rights (access, deletion, portability)
@@ -444,7 +444,7 @@
 
 #### NFR-U-2: Accessibility
 
-**Requirement**: WCAG 2.1 Level AA compliance
+**Requirement**: WCAG 2.1 Level AA compliance (or local equivalent)
 
 **Accessibility Features**:
 - [ ] Keyboard navigation for all functions
