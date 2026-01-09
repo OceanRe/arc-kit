@@ -29,16 +29,16 @@ Install ArcKit CLI:
 
 ```bash
 # Install with pip
-pip install git+https://github.com/tractorjuice/arc-kit.git
+pip install git+https://github.com/OceanRe/arc-kit.git
 
 # Or with uv
-uv tool install arckit-cli --from git+https://github.com/tractorjuice/arc-kit.git
+uv tool install arckit-cli --from git+https://github.com/OceanRe/arc-kit.git
 
 # Or run without installing
-uvx --from git+https://github.com/tractorjuice/arc-kit.git arckit init my-project
+uvx --from git+https://github.com/OceanRe/arc-kit.git arckit init my-project
 ```
 
-**Latest Release**: [v0.9.1](https://github.com/tractorjuice/arc-kit/releases/tag/v0.9.1)
+**Latest Release**: [v0.9.1](https://github.com/OceanRe/arc-kit/releases/tag/v0.9.1)
 
 ### Initialize a Project
 
@@ -632,7 +632,7 @@ Key references live in `docs/` and top-level guides:
 
 ```bash
 # Clone the repository
-git clone https://github.com/tractorjuice/arc-kit.git
+git clone https://github.com/OceanRe/arc-kit.git
 cd arc-kit
 
 # Install in development mode
@@ -734,9 +734,9 @@ arckit init .
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/tractorjuice/arc-kit/issues)
-- **Releases**: [GitHub Releases](https://github.com/tractorjuice/arc-kit/releases)
-- **Latest Version**: [v0.9.1](https://github.com/tractorjuice/arc-kit/releases/tag/v0.9.1)
+- **Issues**: [GitHub Issues](https://github.com/OceanRe/arc-kit/issues)
+- **Releases**: [GitHub Releases](https://github.com/OceanRe/arc-kit/releases)
+- **Latest Version**: [v0.9.1](https://github.com/OceanRe/arc-kit/releases/tag/v0.9.1)
 
 ---
 
